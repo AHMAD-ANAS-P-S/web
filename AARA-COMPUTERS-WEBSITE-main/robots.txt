@@ -1,0 +1,21 @@
+# Robots.txt for AARA Computers Website
+# Allow search engines to crawl all pages
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.git
+
+# Specific crawl delay for faster crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: /sitemap.xml
+
+# Prevent duplicate content issues
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
