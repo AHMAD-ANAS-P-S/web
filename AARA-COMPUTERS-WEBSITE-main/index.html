@@ -1100,6 +1100,32 @@
       opacity: 1;
     }
 
+
+    /* --- Dynamic Configurable Orbit Radius --- */
+    .course-orbit-container {
+      --orbit-radius: 165px;
+    }
+    .course-orbit {
+      width: calc(var(--orbit-radius) * 2) !important;
+      height: calc(var(--orbit-radius) * 2) !important;
+      flex-shrink: 0;
+    }
+    .orbit-item {
+      /* Calculate position mathematically using equal angles (360deg / 8) and the single radius variable */
+      transform: rotate(calc(360deg / 8 * var(--i))) translate(var(--orbit-radius)) rotate(calc(-360deg / 8 * var(--i))) !important;
+    }
+    
+    /* Responsive Radius Adjustments */
+    @media (max-width: 1199px) {
+      .course-orbit-container { --orbit-radius: 145px; }
+    }
+    @media (max-width: 991px) {
+      .course-orbit-container { --orbit-radius: 165px; }
+    }
+    @media (max-width: 575px) {
+      .course-orbit-container { --orbit-radius: 130px; }
+    }
+
 </style>
 
 </head>
