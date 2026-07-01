@@ -2205,3 +2205,36 @@ footer {
     align-items: center;
   }
 }
+
+/* Update Course Cards to Large Images */
+.course-icon {
+    width: calc(100% + 3.6rem) !important;
+    max-width: none !important;
+    height: auto !important;
+    background: transparent !important;
+    border-radius: 16px 16px 0 0 !important;
+    margin: -1.8rem -1.8rem 1.2rem -1.8rem !important;
+    box-shadow: none !important;
+    display: block !important;
+}
+
+.course-icon img {
+    width: 100% !important;
+    height: 280px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 16px 16px 0 0 !important;
+    display: block !important;
+}
+
+@media (max-width: 992px) {
+    .course-icon img {
+        height: 240px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-icon img {
+        height: 200px !important;
+    }
+}
