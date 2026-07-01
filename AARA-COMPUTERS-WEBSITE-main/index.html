@@ -1093,7 +1093,7 @@
       object-position: center;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
-      transform: scale(1.15);
+      transform: scale(1.1);
       border-radius: 50%;
     }
     .hero-slideshow-container .slide.active {
@@ -1103,7 +1103,7 @@
 
     /* --- Dynamic Configurable Orbit Radius --- */
     .course-orbit-container {
-      --orbit-radius: 165px;
+      --orbit-radius: 185px;
     }
     .course-orbit {
       width: calc(var(--orbit-radius) * 2) !important;
@@ -1117,13 +1117,13 @@
     
     /* Responsive Radius Adjustments */
     @media (max-width: 1199px) {
-      .course-orbit-container { --orbit-radius: 145px; }
-    }
-    @media (max-width: 991px) {
       .course-orbit-container { --orbit-radius: 165px; }
     }
+    @media (max-width: 991px) {
+      .course-orbit-container { --orbit-radius: 185px; }
+    }
     @media (max-width: 575px) {
-      .course-orbit-container { --orbit-radius: 130px; }
+      .course-orbit-container { --orbit-radius: 150px; }
     }
 
 </style>
