@@ -2238,3 +2238,14 @@ footer {
         height: 200px !important;
     }
 }
+
+/* Fix for specific course logos */
+.course-card.logo-fit .course-icon img {
+    object-fit: contain !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 15px !important;
+    background: #fff !important;
+    box-sizing: border-box !important;
+}
