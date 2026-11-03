@@ -213,14 +213,14 @@ document.querySelectorAll('.btn-primary, .btn-whatsapp').forEach(btn => {
 });
 
 // ── Founder Parallax ─────────────────────────────────────────
-const founderSection = document.querySelector('.founder-section');
-const founderFrame   = document.querySelector('.founder-photo-frame');
+const founderSection = document.querySelector('.founder-section, .f3d-section');
+const founderFrame   = document.querySelector('.founder-photo-frame, .f3d-composition-stage');
 if (founderSection && founderFrame && window.innerWidth > 768) {
   founderSection.addEventListener('mousemove', e => {
     const rect = founderSection.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width  / 2) * 0.015;
-    const y = (e.clientY - rect.top  - rect.height / 2) * 0.015;
-    founderFrame.style.transform = `translateY(-16px) translate(${x}px, ${y}px)`;
+    const x = (e.clientX - rect.left - rect.width  / 2) * 0.02;
+    const y = (e.clientY - rect.top  - rect.height / 2) * 0.02;
+    founderFrame.style.transform = `translate3d(${x}px, ${y}px, 0)`;
   });
   founderSection.addEventListener('mouseleave', () => {
     founderFrame.style.transform = '';

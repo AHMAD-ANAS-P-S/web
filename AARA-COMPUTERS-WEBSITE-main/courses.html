@@ -1,8 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
 
   <meta charset="UTF-8" />
 
@@ -71,6 +75,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/premium.css" />
 
   <style>
 
@@ -112,7 +117,7 @@
 
     /* Course Pathway */
 
-    .pathway-section { padding: 60px 0; background: #fff; border-bottom: 1px solid #E8EAED; }
+    .pathway-section { padding: calc(40px + var(--nav-h) + 35px) 0 50px; background: #fff; border-bottom: 1px solid #E8EAED; }
 
     .pathway-wrap { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; position: relative; }
 
@@ -156,6 +161,303 @@
 
     }
 
+  
+    /* =========================================
+       PREMIUM 3D COURSES SECTION (COURSES PAGE)
+       ========================================= */
+
+    .courses-section {
+      background: #FFFFFF !important;
+      position: relative;
+      padding: calc(40px + var(--nav-h) + 40px) 0 120px !important;
+      overflow: hidden;
+      isolation: isolate;
+      font-family: inherit;
+    }
+
+    .c3d-bg-accent {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 15%, #F4F9FF 0%, transparent 60%),
+                  radial-gradient(circle at 85% 75%, #F0F7FF 0%, transparent 45%),
+                  radial-gradient(circle at 15% 85%, #FFFDF0 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .c3d-dot-pattern,
+    .c3d-dots-top-right,
+    .c3d-dots-bottom-left,
+    .c3d-deco-topleft {
+      display: none !important;
+    }
+
+    .c3d-wave-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 110px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    .c3d-container {
+      position: relative;
+      z-index: 1;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .c3d-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 55px;
+    }
+
+    .c3d-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 20px;
+      border-radius: 9999px;
+      background: #EBF5FF;
+      border: 1.5px solid #0866F5;
+      color: #0866F5;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(8, 102, 245, 0.12);
+      margin-bottom: 20px;
+    }
+
+    .c3d-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: #102344;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      margin: 0 0 16px;
+    }
+
+    .c3d-title-gradient {
+      background: linear-gradient(135deg, #0866F5 0%, #13BDEB 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      position: relative;
+    }
+    .c3d-curved-underline {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 14px;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .c3d-subtitle {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 20px auto 0;
+      max-width: 620px;
+    }
+
+    .c3d-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .c3d-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      border: 1.5px solid rgba(var(--c-rgb), 0.22);
+      box-shadow: 0 10px 25px -4px rgba(16, 35, 68, 0.07),
+                  0 20px 40px -10px rgba(16, 35, 68, 0.05),
+                  0 0 0 1px rgba(0, 0, 0, 0.02);
+      padding: 24px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.4s ease;
+    }
+
+    .c3d-card:hover {
+      transform: translateY(-10px) !important;
+      border-color: rgba(var(--c-rgb), 0.6);
+      box-shadow: 0 24px 48px -8px rgba(16, 35, 68, 0.12),
+                  0 12px 28px -6px rgba(var(--c-rgb), 0.25),
+                  0 0 0 2px var(--c-accent);
+    }
+
+    .c3d-corner-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 72px;
+      height: 72px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .c3d-corner-accent svg { width: 100%; height: 100%; display: block; }
+
+    .c3d-illustration-box {
+      height: 175px;
+      width: 100%;
+      border-radius: 18px;
+      background: var(--c-light-bg);
+      border: 1px solid rgba(var(--c-rgb), 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .c3d-stage-glow {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(var(--c-rgb), 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .c3d-illustration-img {
+      max-height: 135px;
+      max-width: 84%;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 18px rgba(16, 35, 68, 0.12));
+      transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      z-index: 1;
+    }
+    .c3d-card:hover .c3d-illustration-img {
+      transform: scale(1.08) translateY(-4px);
+    }
+
+    .c3d-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #102344;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin: 0 0 10px;
+    }
+
+    .c3d-card-desc {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0 0 20px;
+      flex-grow: 1;
+    }
+
+    .c3d-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 16px;
+      border-top: 1px solid #EDF2F7;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .c3d-badge-duration {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #EBF5FF;
+      color: #0866F5;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(8, 102, 245, 0.18);
+      white-space: nowrap;
+    }
+    .c3d-badge-duration svg { width: 14px; height: 14px; stroke: #0866F5; flex-shrink: 0; }
+
+    .c3d-badge-cert {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ECFDF3;
+      color: #12B76A;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(18, 183, 106, 0.22);
+      white-space: nowrap;
+    }
+    .c3d-badge-cert svg { width: 14px; height: 14px; stroke: #12B76A; flex-shrink: 0; }
+
+    .c3d-enroll-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #0866F5 0%, #13BDEB 100%);
+      color: #FFFFFF !important;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(8, 102, 245, 0.25);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .c3d-enroll-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(8, 102, 245, 0.38);
+    }
+    .c3d-enroll-arrow {
+      transition: transform 0.25s ease;
+      font-size: 1.1rem;
+    }
+    .c3d-enroll-btn:hover .c3d-enroll-arrow {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 992px) {
+      .c3d-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    }
+    @media (max-width: 640px) {
+      .courses-section { padding: 80px 0 90px !important; }
+      .c3d-grid { grid-template-columns: 1fr; gap: 20px; }
+      .c3d-card { padding: 20px; border-radius: 20px; }
+      .c3d-dot-pattern { display: none; }
+    }
+
+
+    .cert-section .section-subtitle {
+      text-align: justify;
+      text-justify: inter-word;
+      text-align-last: left;
+      line-height: 1.75;
+    }
+    @media (max-width: 768px) {
+      .cert-section .section-subtitle {
+        text-align: left !important;
+      }
+    }
   </style>
 
 </head>
@@ -182,7 +484,7 @@
 
     </a>
 
-    <a href="https://wa.me/919952065544" target="_blank">
+    <a href="https://wa.me/919952065544" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 
@@ -190,7 +492,7 @@
 
     </a>
 
-    <a href="https://www.instagram.com/aaracomputers" target="_blank">
+    <a href="https://www.instagram.com/aaracomputers" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
 
@@ -228,7 +530,7 @@
 
       <a href="about.html">About Us</a>
 
-      <a href="courses.html" class="active">Courses</a>
+      <a href="courses.html?v=3" class="active">Courses</a>
 
       <a href="services.html">IT Services</a>
 
@@ -284,7 +586,7 @@
 
       <li><a href="about.html">About Us</a></li>
 
-      <li><a href="courses.html" class="active">Courses</a></li>
+      <li><a href="courses.html?v=3" class="active">Courses</a></li>
 
       <li><a href="services.html">IT Services</a></li>
 
@@ -307,39 +609,48 @@
 
 
 
-  <!-- Page Hero Premium -->
+  
 
-  <header class="page-hero-premium" style="background-image: url('assets/images/courses-hero.png');">
 
-    <div class="page-hero-overlay"></div>
 
-    <div class="page-hero-particles"></div>
+  
 
-    <div class="container reveal">
 
-      <h1>Our Courses</h1>
 
-      <div style="margin-top:1rem;">
+  <!-- Courses Grid -->
 
-        <span class="breadcrumb-premium"><a href="index.html">Home</a> <span>/</span> Courses</span>
+  <section class="courses-section" id="courses">
+    <div class="c3d-bg-accent"></div>
+    <!-- Background Cleaned (Dotted Squares and Top-Left Streak Lines Removed) -->
 
+    <svg class="c3d-wave-bottom" viewBox="0 0 1440 110" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0 60 C320 100, 680 20, 1040 70 C1240 95, 1380 75, 1440 65 L1440 110 L0 110 Z" fill="#F4F9FF" opacity="0.8"/>
+      <path d="M0 80 C360 40, 720 105, 1100 60 C1280 40, 1390 65, 1440 70 L1440 110 L0 110 Z" fill="#EBF4FE" opacity="0.5"/>
+    </svg>
+
+    <div class="c3d-container">
+      <div class="c3d-header">
+        <div class="c3d-badge">
+          <span class="c3d-badge-icon">🎓</span>
+          <span>OUR COURSES</span>
+        </div>
+        <h2 class="c3d-title">
+          Explore Our 
+          <span class="c3d-title-gradient">
+            Core Courses
+            <svg class="c3d-curved-underline" viewBox="0 0 200 20" fill="none" preserveAspectRatio="none">
+              <path d="M4 14 Q 100 4, 196 12" stroke="#FFC928" stroke-width="4.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="c3d-subtitle">
+          Comprehensive training programs designed by industry experts. Choose your path.
+        </p>
       </div>
 
-      <p style="color:rgba(255,255,255,0.75);margin-top:1rem;font-size:1.1rem;">Practical Skills for Real Careers</p>
-
-    </div>
-
-  </header>
-
-
-
-  <!-- Course Pathway Visualization -->
-
-  <section class="pathway-section">
-
-    <div class="container reveal">
-
-      <div class="pathway-wrap">
+      <!-- Course Pathway Visualization (Below Header) -->
+      <div style="margin: 35px auto 55px; max-width: 900px; position: relative;">
+        <div class="pathway-wrap">
 
         <div class="pathway-line"></div>
 
@@ -376,275 +687,452 @@
         </div>
 
       </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- Courses Grid -->
-
-  <section class="courses-section">
-
-    <div class="container">
-
-      <div class="section-header center reveal">
-
-        <h2 class="section-title">Explore Our Core Courses</h2>
-
-        <p class="section-subtitle">Comprehensive training programs designed by industry experts.</p>
-
       </div>
 
-      <div class="grid-3">
+      <div class="c3d-grid">
 
-        <!-- Course 1 -->
-
-        <div class="course-card logo-fit reveal" data-delay="0">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/office-automation.jpg" alt="Office Automation" /></div>
-
-          <h3>Office Automation (CCA)</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Master MS Office, Excel, Word, PowerPoint for productive office work.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 1: Office Automation (CCA) -->
+        <div class="c3d-card" style="--c-rgb: 8, 102, 245; --c-accent: #0866F5; --c-accent-light: #13BDEB; --c-light-bg: #F0F7FF;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-0)"/>
+              <defs>
+                <linearGradient id="cp-grad-0" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0866F5"/>
+                  <stop offset="1" stop-color="#13BDEB"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Office Automation (CCA)" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/office-automation.jpg" alt="Office Automation (CCA)" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Office Automation (CCA)</h3>
+          <p class="c3d-card-desc">Master MS Office, Excel, Word, PowerPoint for productive office work.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Office%20Automation%20(CCA)" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 2 -->
-
-        <div class="course-card reveal" data-delay="100">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/tally-gst.jpg" alt="Tally Prime with GST" /></div>
-
-          <h3>Tally Prime with GST</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Learn GST billing, accounts, and inventory with Tally Prime.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 2: Tally Prime with GST -->
+        <div class="c3d-card" style="--c-rgb: 255, 153, 0; --c-accent: #FF9900; --c-accent-light: #FFC928; --c-light-bg: #FFFDF4;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-1)"/>
+              <defs>
+                <linearGradient id="cp-grad-1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF9900"/>
+                  <stop offset="1" stop-color="#FFC928"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Tally Prime with GST" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/tally-gst.jpg" alt="Tally Prime with GST" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Tally Prime with GST</h3>
+          <p class="c3d-card-desc">Learn GST billing, accounts, and inventory with Tally Prime.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Tally%20Prime%20with%20GST" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 3 -->
-
-        <div class="course-card logo-fit reveal" data-delay="200">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/design-printing.png" alt="Designing with Printing Tech" /></div>
-
-          <h3>Designing with Printing Tech</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Photoshop, CorelDraw, printing design, and DTP essentials.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 3 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 3: Designing with Printing Tech -->
+        <div class="c3d-card" style="--c-rgb: 225, 29, 72; --c-accent: #E11D48; --c-accent-light: #FB7185; --c-light-bg: #FFF1F2;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-2)"/>
+              <defs>
+                <linearGradient id="cp-grad-2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E11D48"/>
+                  <stop offset="1" stop-color="#FB7185"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Designing with Printing Technologies" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/design-printing.png" alt="Designing with Printing Tech" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Designing with Printing Tech</h3>
+          <p class="c3d-card-desc">Photoshop, CorelDraw, printing design, and DTP essentials.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>3 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Designing%20with%20Printing%20Technologies" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 4 -->
-
-        <div class="course-card reveal" data-delay="0">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/digital-marketing.jpg" alt="Digital Marketing" /></div>
-
-          <h3>Digital Marketing</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">SEO, Social Media Marketing, Google Ads, Content Strategy.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 4: Digital Marketing -->
+        <div class="c3d-card" style="--c-rgb: 139, 92, 246; --c-accent: #8B5CF6; --c-accent-light: #A855F7; --c-light-bg: #FAF5FF;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-3)"/>
+              <defs>
+                <linearGradient id="cp-grad-3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#8B5CF6"/>
+                  <stop offset="1" stop-color="#A855F7"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Digital Marketing" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/digital-marketing.jpg" alt="Digital Marketing" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Digital Marketing</h3>
+          <p class="c3d-card-desc">SEO, Social Media Marketing, Google Ads, Content Strategy.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Digital%20Marketing" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 5 -->
-
-        <div class="course-card reveal" data-delay="100">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/web-development.webp" alt="Web Development" /></div>
-
-          <h3>Web Development</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">HTML, CSS, JavaScript — build responsive modern websites.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 5: Web Development -->
+        <div class="c3d-card" style="--c-rgb: 18, 183, 106; --c-accent: #12B76A; --c-accent-light: #10B981; --c-light-bg: #F0FDF4;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-4)"/>
+              <defs>
+                <linearGradient id="cp-grad-4" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#12B76A"/>
+                  <stop offset="1" stop-color="#10B981"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Web Development" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/web-development.webp" alt="Web Development" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Web Development</h3>
+          <p class="c3d-card-desc">HTML, CSS, JavaScript — build responsive modern websites.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Web%20Development" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 6 -->
-
-        <div class="course-card reveal" data-delay="200">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/c-programming.jpg" alt="C Programming" /></div>
-
-          <h3>C Programming</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Fundamentals of C, logic building, and core programming concepts.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 6: C Programming -->
+        <div class="c3d-card" style="--c-rgb: 2, 132, 199; --c-accent: #0284C7; --c-accent-light: #38BDF8; --c-light-bg: #F0F9FF;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-5)"/>
+              <defs>
+                <linearGradient id="cp-grad-5" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0284C7"/>
+                  <stop offset="1" stop-color="#38BDF8"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=C Programming" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/c-programming.jpg" alt="C Programming" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">C Programming</h3>
+          <p class="c3d-card-desc">Fundamentals of C, logic building, and core programming concepts.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=C%20Programming" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 7 -->
-
-        <div class="course-card reveal" data-delay="0">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/cpp.png" alt="C++ Programming" /></div>
-
-          <h3>C++ Programming</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">OOP concepts, classes, inheritance, and advanced programming.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 7: C++ Programming -->
+        <div class="c3d-card" style="--c-rgb: 79, 70, 229; --c-accent: #4F46E5; --c-accent-light: #6366F1; --c-light-bg: #EEF2FF;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-6)"/>
+              <defs>
+                <linearGradient id="cp-grad-6" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#4F46E5"/>
+                  <stop offset="1" stop-color="#6366F1"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=C++" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/cpp.png" alt="C++ Programming" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">C++ Programming</h3>
+          <p class="c3d-card-desc">OOP concepts, classes, inheritance, and advanced programming.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=C%2B%2B" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 8 -->
-
-        <div class="course-card logo-fit reveal" data-delay="100">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/java.png" alt="Java Programming" /></div>
-
-          <h3>Java Programming</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Core Java, OOP principles, and application development.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 8: Java Programming -->
+        <div class="c3d-card" style="--c-rgb: 234, 88, 12; --c-accent: #EA580C; --c-accent-light: #F97316; --c-light-bg: #FFF7ED;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-7)"/>
+              <defs>
+                <linearGradient id="cp-grad-7" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#EA580C"/>
+                  <stop offset="1" stop-color="#F97316"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Java" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/java.png" alt="Java Programming" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Java Programming</h3>
+          <p class="c3d-card-desc">Core Java, OOP principles, and application development.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Java" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 9 -->
-
-        <div class="course-card logo-fit reveal" data-delay="200">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/python.png" alt="Python Programming" /></div>
-
-          <h3>Python Programming</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">Python basics, scripting, automation, and project building.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-blue">⏱ 2 Months</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 9: Python Programming -->
+        <div class="c3d-card" style="--c-rgb: 2, 132, 199; --c-accent: #0284C7; --c-accent-light: #38BDF8; --c-light-bg: #F0F9FF;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-8)"/>
+              <defs>
+                <linearGradient id="cp-grad-8" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0284C7"/>
+                  <stop offset="1" stop-color="#38BDF8"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Python" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/python.png" alt="Python Programming" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Python Programming</h3>
+          <p class="c3d-card-desc">Python scripting, automation and practical project development.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>2 Months</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Python" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-         <!-- Course 10 -->
-
-        <div class="course-card reveal" data-delay="0">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/cctv.jpg" alt="CCTV Camera Installation" /></div>
-
-          <h3>CCTV Camera Installation</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">IP cameras, DVR/NVR systems, cabling, and surveillance setup.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-orange">⏱ 1 Month</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 10: CCTV Camera Installation -->
+        <div class="c3d-card" style="--c-rgb: 236, 72, 153; --c-accent: #EC4899; --c-accent-light: #F43F5E; --c-light-bg: #FFF1F2;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-9)"/>
+              <defs>
+                <linearGradient id="cp-grad-9" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#EC4899"/>
+                  <stop offset="1" stop-color="#F43F5E"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=CCTV Camera Installation & Training" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/cctv.webp" alt="CCTV Camera Installation" class="c3d-illustration-img" onerror="this.onerror=null;this.src='assets/images/courses/cctv.jpg';" />
+          </div>
+          <h3 class="c3d-card-title">CCTV Camera Installation</h3>
+          <p class="c3d-card-desc">IP cameras, DVR/NVR systems, cabling and surveillance setup.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>1 Month</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=CCTV%20Camera%20Installation%20%26%20Training" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
-        <!-- Course 11 -->
-
-        <div class="course-card reveal" data-delay="100">
-
-          <div class="course-icon"><img loading="lazy" decoding="async" src="assets/images/courses/networking.jpg" alt="Computer Hardware & Networking" /></div>
-
-          <h3>Computer Hardware & Networking</h3>
-
-          <p style="font-size:.88rem;color:#6B7280;line-height:1.6;margin-bottom:1.5rem;">PC assembly, troubleshooting, LAN/WAN setup, and maintenance.</p>
-
-          <div class="course-meta">
-
-            <span class="badge badge-orange">⏱ 1 Month</span>
-
-            <span class="badge badge-green">✓ Certificate Available</span>
-
+        <!-- Course Card 11: Computer Hardware & Networking -->
+        <div class="c3d-card" style="--c-rgb: 13, 148, 136; --c-accent: #0D9488; --c-accent-light: #14B8A6; --c-light-bg: #F0FDFA;">
+          <div class="c3d-corner-accent" aria-hidden="true">
+            <svg viewBox="0 0 72 72" fill="none">
+              <path d="M0 0 L40 0 C22 4, 4 22, 0 40 Z" fill="url(#cp-grad-10)"/>
+              <defs>
+                <linearGradient id="cp-grad-10" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0D9488"/>
+                  <stop offset="1" stop-color="#14B8A6"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-
-          <a href="contact.html?course=Computer Hardware & Networking" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 1.5rem;">Enroll Now</a>
-
+          <div class="c3d-illustration-box">
+            <div class="c3d-stage-glow"></div>
+            <img loading="lazy" decoding="async" src="assets/images/courses/networking.jpg" alt="Computer Hardware & Networking" class="c3d-illustration-img" />
+          </div>
+          <h3 class="c3d-card-title">Computer Hardware & Networking</h3>
+          <p class="c3d-card-desc">PC assembly, troubleshooting, LAN/WAN setup, and maintenance.</p>
+          <div class="c3d-card-footer">
+            <div class="c3d-badge-duration">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>1 Month</span>
+            </div>
+            <div class="c3d-badge-cert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificate Available</span>
+            </div>
+          </div>
+          <a href="contact.html?course=Computer%20Hardware%20%26%20Networking" class="c3d-enroll-btn">
+            <span>Enroll Now</span>
+            <span class="c3d-enroll-arrow">→</span>
+          </a>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
 
@@ -673,10 +1161,8 @@
 
           <h2 class="section-title">Industry Recognized Certification</h2>
 
-          <p class="section-subtitle" style="margin-bottom: 2rem;">
-
-            AARA Computers is committed to providing education that adds real value to your career. All students receive an official completion certificate after successfully finishing their course.
-
+          <p class="section-subtitle" style="margin-bottom: 2rem; text-align: justify; text-justify: inter-word; text-align-last: left;">
+            Over 1500 students have transformed their careers through AARA Computers' practical training. From school leavers to working professionals — our training creates real-world impact.
           </p>
 
           <div class="achievement-list">
@@ -759,137 +1245,109 @@
 
   ══════════════════════════════════════ -->
 
-  <footer>
+  <footer class="ftr3d-footer" role="contentinfo">
+    <div class="ftr3d-container">
+      <div class="ftr3d-grid">
 
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-
-          <img loading="lazy" decoding="async" src="assets/images/logo/company-logo.png" alt="AARA Computers" />
-
-          <p>Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.</p>
-
-          <div class="footer-social">
-
-            <a href="https://www.instagram.com/aaracomputers" target="_blank" title="Instagram">
-
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-
+        <!-- COLUMN 1: Company Info -->
+        <div class="ftr3d-col ftr3d-col-brand">
+          <a href="index.html" class="ftr3d-logo-link" aria-label="AARA Computers Home">
+            <img loading="lazy" decoding="async" src="assets/images/logo/company-logo.png" alt="AARA Computers Logo" class="ftr3d-logo"/>
+          </a>
+          <p class="ftr3d-brand-desc">
+            Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.
+          </p>
+          <div class="ftr3d-social-row">
+            <a href="https://www.instagram.com/aaracomputers" target="_blank" rel="noopener noreferrer" class="ftr3d-social-btn" title="Follow us on Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
             </a>
-
-            <a href="https://wa.me/919952065544" target="_blank" title="WhatsApp">
-
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+            <a href="https://wa.me/919952065544" target="_blank" rel="noopener noreferrer" class="ftr3d-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
             </a>
-
-            <a href="tel:+919952065544" title="Call Us">
-
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-
+            <a href="tel:+919952065544" class="ftr3d-social-btn" title="Call Us" aria-label="Call">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
             </a>
-
           </div>
-
         </div>
 
-        <div class="footer-col">
-
-          <h4>Quick Links</h4>
-
-          <ul>
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="about.html">About Us</a></li>
-
-            <li><a href="courses.html">Our Courses</a></li>
-
-            <li><a href="services.html">IT Services</a></li>
-
-            <li><a href="gallery.html">Gallery</a></li>
-<li><a href="media.html">Media</a></li>
-
-            <li><a href="contact.html">Contact Us</a></li>
-
+        <!-- COLUMN 2: Quick Links -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">QUICK LINKS</h4>
+          <ul class="ftr3d-link-list">
+            <li><a href="index.html"><span class="ftr3d-arrow">▸</span> Home</a></li>
+            <li><a href="about.html"><span class="ftr3d-arrow">▸</span> About Us</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Our Courses</a></li>
+            <li><a href="services.html?v=2"><span class="ftr3d-arrow">▸</span> IT Services</a></li>
+            <li><a href="gallery.html"><span class="ftr3d-arrow">▸</span> Gallery</a></li>
+            <li><a href="media.html"><span class="ftr3d-arrow">▸</span> Media</a></li>
+            <li><a href="contact.html"><span class="ftr3d-arrow">▸</span> Contact Us</a></li>
           </ul>
-
         </div>
 
-        <div class="footer-col">
-
-          <h4>Popular Courses</h4>
-
-          <ul>
-
-            <li><a href="courses.html">Office Automation (CCA)</a></li>
-
-            <li><a href="courses.html">Tally Prime with GST</a></li>
-
-            <li><a href="courses.html">Digital Marketing</a></li>
-
-            <li><a href="courses.html">Web Development</a></li>
-
-            <li><a href="courses.html">Python Programming</a></li>
-
-            <li><a href="courses.html">CCTV Installation</a></li>
-
+        <!-- COLUMN 3: Popular Courses -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">POPULAR COURSES</h4>
+          <ul class="ftr3d-link-list">
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Office Automation (CCA)</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Tally Prime with GST</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Digital Marketing</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Web Development</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Python Programming</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> CCTV Installation</a></li>
           </ul>
-
         </div>
 
-        <div class="footer-col">
+        <!-- COLUMN 4: Contact Info -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">CONTACT INFO</h4>
+          <div class="ftr3d-contact-list">
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
+            </div>
 
-          <h4>Contact Info</h4>
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              <span>
+                <a href="tel:+919952065544">99520 65544</a> / <a href="tel:+919445435755">94454 35755</a>
+              </span>
+            </div>
 
-          <div class="footer-contact-item">
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:aaracomputers@gmail.com">aaracomputers@gmail.com</a>
+            </div>
 
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-
-            <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
-
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Mon–Sat: 9:00 AM – 9:00 PM<br><span style="color:#F59E0B;">Sunday: Closed</span></span>
+            </div>
           </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-
-            <span><a href="tel:+919952065544" style="color:inherit;">99520 65544</a> / <a href="tel:+919445435755" style="color:inherit;">94454 35755</a></span>
-
-          </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-
-            <a href="mailto:aaracomputers@gmail.com" style="color:inherit;">aaracomputers@gmail.com</a>
-
-          </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-
-            <span>Mon–Sat: 9:00 AM – 9:00 PM<br/>Sunday: Closed</span>
-
-          </div>
-
         </div>
 
       </div>
 
-      <div class="footer-bottom">
-
-        <span>© 2024 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
-
-        
-
+      <div class="ftr3d-bottom">
+        <span class="ftr3d-copy">© 2026 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
       </div>
-
     </div>
-
   </footer>
 
 
@@ -898,7 +1356,7 @@
 
   <div class="fab-container">
 
-    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank">
+    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 
@@ -919,6 +1377,7 @@
 
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/premium.js" defer></script>
 
 </body>
 

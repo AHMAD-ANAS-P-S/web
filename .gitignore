@@ -1,0 +1,6 @@
+*.bak*
+*.tmp
+scratch/
+.DS_Store
+Thumbs.db
+node_modules/

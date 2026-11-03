@@ -71,248 +71,1077 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/premium.css" />
 
   <style>
 
-    /* Page Header */
+  /* ══════════════════════════════════════════════════════════════════════════
+     AARA COMPUTERS — PREMIUM 3D CONTACT PAGE REDESIGN
+     ══════════════════════════════════════════════════════════════════════════ */
 
-    .page-header {
+  :root {
+    --cnt-navy-dark: #071A3A;
+    --cnt-navy-mid: #0B1F42;
+    --cnt-navy-light: #102B5C;
+    --cnt-blue-primary: #0866F5;
+    --cnt-blue-glow: #19B9EE;
+    --cnt-gold: #FFBF00;
+    --cnt-gold-dark: #D97706;
+    --cnt-green: #25D366;
+    --cnt-green-dark: #128C7E;
+    --cnt-purple: #A855F7;
+    --cnt-text-dark: #10213F;
+    --cnt-text-muted: #64748B;
+    --cnt-border-light: #E2E8F0;
+    --cnt-bg-light: #F8FAFC;
+  }
 
-      background: linear-gradient(135deg, #0B1B35 0%, #132a50 100%);
+  /* Page Hero */
+  .page-hero-premium {
+    position: relative;
+    padding: 160px 0 75px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+  }
 
-      padding: 160px 0 80px;
+  .page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7, 26, 58, 0.88) 0%, rgba(11, 31, 66, 0.94) 100%);
+    z-index: 1;
+  }
 
-      text-align: center;
+  .page-hero-particles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(25, 185, 238, 0.12) 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+    z-index: 1;
+    pointer-events: none;
+  }
 
-      color: #fff;
+  .page-hero-premium .container {
+    position: relative;
+    z-index: 2;
+  }
 
+  .page-hero-badge-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .page-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    border-radius: 999px;
+    background: rgba(8, 102, 245, 0.2);
+    border: 1.5px solid rgba(8, 102, 245, 0.5);
+    color: #38BDF8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(8, 102, 245, 0.25);
+  }
+
+  .page-hero-premium h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .page-hero-premium .gradient-text {
+    background: linear-gradient(135deg, #0866F5 0%, #19B9EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .breadcrumb-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: #DCEBFF;
+  }
+
+  .breadcrumb-premium a {
+    color: #38BDF8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb-premium a:hover {
+    color: #FFFFFF;
+  }
+
+  
+  /* ══════════════════════════════════════════════════════════════════════════
+     EXACT REFERENCE DESIGN MATCHING (.cnt3d-section)
+     Ref: media_1793629388995_4afc65dd.png
+     ══════════════════════════════════════════════════════════════════════════ */
+  .cnt3d-section {
+    position: relative;
+    padding: calc(40px + var(--nav-h) + 35px) 0 95px;
+    background: radial-gradient(circle at 10% 20%, #EEF6FF 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, #F0F7FF 0%, transparent 40%),
+                #FFFFFF;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Corner Wave Ribbons (Top-Right & Bottom-Left) */
+  .cnt3d-wave-tr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 220px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .cnt3d-wave-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 360px;
+    height: 200px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Top-Left Dotted Trajectory Accents */
+  .cnt3d-dotted-arc {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 140px;
+    height: 140px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.55;
+  }
+
+  .cnt3d-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .cnt3d-grid {
+    display: grid;
+    grid-template-columns: 395px 1fr;
+    gap: 46px;
+    align-items: center;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     LEFT CARD: 3D DEEP NAVY BLUE CONTACT PANEL
+     ══════════════════════════════════════════════════════════════════════════ */
+  .cnt3d-info-card {
+    background: linear-gradient(175deg, #072352 0%, #06193E 45%, #03102C 100%);
+    border: 2px solid #0099FF;
+    border-radius: 26px;
+    padding: 34px 28px 24px;
+    box-shadow: 0 20px 50px -10px rgba(7, 26, 58, 0.55),
+                0 0 35px rgba(0, 153, 255, 0.4),
+                inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 580px;
+  }
+
+  /* Top-Left 3D Curved Golden Ribbon Fold */
+  .cnt3d-gold-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 58px;
+    background: linear-gradient(135deg, #FFD500 0%, #FF9900 100%);
+    border-top-left-radius: 24px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+    z-index: 5;
+    pointer-events: none;
+  }
+  .cnt3d-gold-ribbon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, transparent 60%);
+  }
+
+  /* Bottom Cyan Wave Pedestal inside Card */
+  .cnt3d-card-wave-base {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(180deg, transparent 0%, rgba(6, 182, 212, 0.25) 50%, rgba(14, 165, 233, 0.55) 100%);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    pointer-events: none;
+    z-index: 1;
+    /* border-top removed */
+    /* box-shadow removed */
+  }
+
+  /* Items List in Left Card */
+  .cnt3d-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cnt3d-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 10px 0;
+    position: relative;
+    transition: transform 0.25s ease;
+  }
+  .cnt3d-item:hover {
+    transform: translateX(4px);
+  }
+
+  /* Squircle 3D Icon Badges */
+  .cnt3d-icon-squircle {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+  .cnt3d-icon-squircle svg {
+    width: 24px;
+    height: 24px;
+    color: #FFFFFF;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .cnt3d-squircle-blue {
+    background: linear-gradient(145deg, #38BDF8 0%, #0D6EFD 70%, #0284C7 100%);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.65);
+  }
+  .cnt3d-squircle-green {
+    background: linear-gradient(145deg, #4ADE80 0%, #16A34A 70%, #15803D 100%);
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.65);
+  }
+  .cnt3d-squircle-gold {
+    background: linear-gradient(145deg, #FDE047 0%, #EAB308 60%, #D97706 100%);
+    box-shadow: 0 6px 16px rgba(234, 179, 8, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.65);
+  }
+  .cnt3d-squircle-purple {
+    background: linear-gradient(145deg, #C084FC 0%, #9333EA 60%, #7E22CE 100%);
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.65);
+  }
+
+  /* Vertical Accent Line Beside Info */
+  .cnt3d-vbar {
+    width: 3.5px;
+    min-width: 3.5px;
+    border-radius: 999px;
+    align-self: stretch;
+    margin: 2px 0;
+  }
+  .cnt3d-vbar-blue { background: #0284C7; box-shadow: 0 0 8px #0284C7; }
+  .cnt3d-vbar-green { background: #22C55E; box-shadow: 0 0 8px #22C55E; }
+  .cnt3d-vbar-gold { background: #EAB308; box-shadow: 0 0 8px #EAB308; }
+  .cnt3d-vbar-purple { background: #A855F7; box-shadow: 0 0 8px #A855F7; }
+
+  /* Content Text in Items */
+  .cnt3d-item-content {
+    flex: 1;
+    min-width: 0;
+  }
+  .cnt3d-item-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+  .cnt3d-item-text {
+    font-size: 0.88rem;
+    color: #FFFFFF;
+    line-height: 1.45;
+    margin: 0;
+  }
+  .cnt3d-cyan-text {
+    color: #19C5E8;
+    font-weight: 700;
+    font-size: 0.96rem;
+    display: block;
+    line-height: 1.45;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+  }
+  .cnt3d-cyan-text:hover {
+    color: #67E8F9;
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+  }
+
+  /* Glowing Cyan Laser Dividers */
+  .cnt3d-laser-divider {
+    height: 1.5px;
+    width: 100%;
+    background: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.95) 0%, rgba(14, 165, 233, 0.5) 45%, transparent 85%);
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.65);
+    margin: 12px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Founder Profile at Bottom */
+  .cnt3d-founder-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 8px;
+    position: relative;
+    z-index: 2;
+  }
+  .cnt3d-founder-avatar-wrap {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50%;
+    border: 2.5px solid #F59E0B;
+    box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+    overflow: hidden;
+    position: relative;
+  }
+  .cnt3d-founder-avatar-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cnt3d-founder-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .cnt3d-founder-name-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .cnt3d-founder-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .cnt3d-award-rosette {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FBBF24;
+    filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.5));
+  }
+  .cnt3d-founder-sub {
+    font-size: 0.84rem;
+    color: #93C5FD;
+    margin: 2px 0 0;
+    font-weight: 500;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     RIGHT SIDE: ENQUIRY FORM & 3D ARTWORK
+     ══════════════════════════════════════════════════════════════════════════ */
+  .cnt3d-form-wrap {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Top 3D Floating Illustrations (Envelope + Plane + Trail) */
+  .cnt3d-top-artwork {
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    width: 250px;
+    height: 160px;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Outlined Top Badge */
+  .cnt3d-badge-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1.5px solid #126BFF;
+    border-radius: 999px;
+    padding: 6px 16px;
+    color: #126BFF;
+    font-weight: 800;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(18, 107, 255, 0.08);
+  }
+  .cnt3d-badge-outline svg {
+    width: 14px;
+    height: 14px;
+    color: #126BFF;
+  }
+
+  /* Form Title with Yellow Radiant Sparks & Underline */
+  .cnt3d-form-heading {
+    position: relative;
+    margin: 0 0 10px;
+    display: inline-block;
+  }
+  .cnt3d-main-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.3rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #10213F;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+  }
+  .cnt3d-title-message {
+    background: linear-gradient(135deg, #126BFF 0%, #19C5E8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+  .cnt3d-title-underline {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #FFBF00;
+    border-radius: 999px;
+  }
+
+  /* Yellow Spark Rays Around Heading */
+  .cnt3d-ray-top-left {
+    position: absolute;
+    top: -14px;
+    left: 215px;
+  }
+  .cnt3d-ray-top-right {
+    position: absolute;
+    top: 5px;
+    right: -36px;
+  }
+
+  .cnt3d-form-subtitle {
+    font-size: 0.95rem;
+    color: #64748B;
+    line-height: 1.55;
+    margin: 0 0 24px;
+    max-width: 580px;
+  }
+
+  /* Form Structure */
+  .cnt3d-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cnt3d-input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .cnt3d-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* Label with Flat Colored Icon */
+  .cnt3d-field-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #10213F;
+  }
+  .cnt3d-lbl-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cnt3d-lbl-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  .cnt3d-lbl-cyan { color: #00BAF2; }
+  .cnt3d-lbl-purple { color: #A855F7; }
+  .cnt3d-lbl-green { color: #10B981; }
+
+  /* Input Box with Outline Icon */
+  .cnt3d-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .cnt3d-input-icon {
+    position: absolute;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    color: #38BDF8;
+    pointer-events: none;
+    transition: color 0.2s ease;
+  }
+  .cnt3d-control {
+    width: 100%;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1.5px solid #BFDBFE;
+    border-radius: 14px;
+    padding: 0 16px 0 46px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #10213F;
+    box-shadow: 0 4px 12px rgba(191, 219, 254, 0.25);
+    transition: all 0.25s ease;
+    outline: none;
+  }
+  .cnt3d-control:focus {
+    border-color: #126BFF;
+    box-shadow: 0 0 0 3px rgba(18, 107, 255, 0.2),
+                0 6px 16px rgba(18, 107, 255, 0.15);
+    background: #FFFFFF;
+  }
+  .cnt3d-control::placeholder {
+    color: #94A3B8;
+  }
+
+  /* Select Box */
+  .cnt3d-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 44px;
+    cursor: pointer;
+  }
+  .cnt3d-select-chevron {
+    position: absolute;
+    right: 16px;
+    width: 18px;
+    height: 18px;
+    color: #1D4ED8;
+    pointer-events: none;
+  }
+
+  /* Textarea */
+  .cnt3d-textarea-box {
+    align-items: flex-start;
+  }
+  .cnt3d-textarea-box .cnt3d-input-icon {
+    top: 16px;
+  }
+  .cnt3d-textarea {
+    height: 110px;
+    padding: 14px 16px 14px 46px;
+    resize: vertical;
+    line-height: 1.55;
+  }
+
+  /* Submit Button Container with Radiating Cyan Ripple Rings */
+  .cnt3d-btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    position: relative;
+  }
+
+  .cnt3d-btn-pulse-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  /* Concentric Cyan Ripple Rings */
+  .cnt3d-ripple-ring {
+    position: absolute;
+    inset: -6px -16px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(6, 182, 212, 0.5);
+    pointer-events: none;
+    animation: cnt3dRippleAnim 2.8s ease-out infinite;
+  }
+  .cnt3d-ripple-ring:nth-child(2) {
+    inset: -12px -24px;
+    border-color: rgba(6, 182, 212, 0.3);
+    animation-delay: 0.6s;
+  }
+
+  @keyframes cnt3dRippleAnim {
+    0% { transform: scale(0.97); opacity: 0.8; }
+    50% { transform: scale(1.02); opacity: 0.4; }
+    100% { transform: scale(0.97); opacity: 0.8; }
+  }
+
+  /* The Green Action Button */
+  .cnt3d-btn-whatsapp-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(180deg, #10B981 0%, #059669 100%);
+    border: none;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    padding: 15px 44px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4),
+                0 0 25px rgba(6, 182, 212, 0.55);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .cnt3d-btn-whatsapp-action:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(16, 185, 129, 0.5),
+                0 0 35px rgba(6, 182, 212, 0.75);
+    color: #FFFFFF;
+  }
+  .cnt3d-btn-whatsapp-action svg {
+    width: 24px;
+    height: 24px;
+    color: #FFFFFF;
+  }
+
+  /* Yellow Clicking Hand Pointer */
+  .cnt3d-click-hand {
+    position: absolute;
+    right: -24px;
+    bottom: -16px;
+    width: 52px;
+    height: 52px;
+    pointer-events: none;
+    z-index: 5;
+    animation: cnt3dHandTap 2s ease-in-out infinite;
+  }
+  @keyframes cnt3dHandTap {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-3px, -3px) scale(0.95); }
+  }
+
+  /* Responsive Hardening */
+  @media (max-width: 992px) {
+    .cnt3d-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
-
-    .page-header h1 {
-
-      font-family: 'Outfit', sans-serif;
-
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-
-      font-weight: 800;
-
-      margin-bottom: 1rem;
-
+    .cnt3d-info-card {
+      max-width: 540px;
+      margin: 0 auto;
+      width: 100%;
     }
-
-    .page-header p {
-
-      font-size: 1.1rem;
-
-      color: rgba(255,255,255,0.7);
-
+    .cnt3d-top-artwork {
+      display: none;
     }
-
-    .form-feedback {
-
-      margin-bottom: 1rem;
-
-      font-size: 0.95rem;
-
-      color: #D02323;
-
-      min-height: 22px;
-
-      opacity: 0.95;
-
+    .cnt3d-wave-tr, .cnt3d-wave-bl {
+      display: none;
     }
+  }
 
-    .form-feedback.success {
-
-      color: #0f6fff;
-
+  @media (max-width: 640px) {
+    .cnt3d-input-row {
+      grid-template-columns: 1fr;
     }
-
-    .wa-toast {
-
-      position: fixed;
-
-      left: 50%;
-
-      bottom: 20px;
-
-      transform: translateX(-50%);
-
-      background: rgba(15,111,255,0.96);
-
-      color: #fff;
-
-      border-radius: 999px;
-
-      padding: 12px 22px;
-
-      font-size: 0.95rem;
-
-      box-shadow: 0 16px 40px rgba(15,111,255,0.18);
-
-      opacity: 0;
-
-      visibility: hidden;
-
-      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
-
-      z-index: 9999;
-
-      pointer-events: none;
-
+    .cnt3d-btn-whatsapp-action {
+      padding: 14px 28px;
+      font-size: 1rem;
+      width: 100%;
     }
-
-    .wa-toast.show {
-
-      opacity: 1;
-
-      visibility: visible;
-
-      transform: translateX(-50%) translateY(0);
-
+    .cnt3d-click-hand {
+      display: none;
     }
+  }
 
+  /* ══════════════════════════════════════════════════════════════════════════
+     MAP SECTION (.cnt3d-map-section)
+     ══════════════════════════════════════════════════════════════════════════ */
+  .cnt3d-map-section {
+    padding: 85px 0 95px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+  }
 
+  .cnt3d-map-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .btn-whatsapp {
+  .cnt3d-map-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 0 0 10px;
+    position: relative;
+  }
 
-      cursor: pointer;
+  .cnt3d-map-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #10213F;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
 
-      background: #25D366;
+  .cnt3d-rays {
+    display: inline-flex;
+    align-items: center;
+    animation: cnt3dRaySparkle 3s ease-in-out infinite alternate;
+  }
 
-      color: #ffffff;
+  .cnt3d-map-subtitle {
+    font-size: 1.05rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin: 4px auto 14px;
+  }
 
-      box-shadow: 0 14px 30px rgba(37,211,102,.25);
+  .cnt3d-map-divider {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+  }
 
-      border: 1px solid rgba(37,211,102,0.3);
+  .cnt3d-bar-blue {
+    width: 48px;
+    height: 3.5px;
+    border-radius: 999px;
+    background: #0866F5;
+  }
 
+  .cnt3d-bar-yellow {
+    width: 24px;
+    height: 3.5px;
+    border-radius: 999px;
+    background: #FFBF00;
+  }
+
+  .cnt3d-map-frame {
+    width: 100%;
+    height: 440px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid rgba(8, 102, 245, 0.22);
+    box-shadow: 0 18px 45px -10px rgba(16, 33, 63, 0.12),
+                0 4px 16px -2px rgba(16, 33, 63, 0.04);
+    background: #E2E8F0;
+    position: relative;
+  }
+
+  .cnt3d-map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     ANIMATIONS & KEYFRAMES
+     ══════════════════════════════════════════════════════════════════════════ */
+  @keyframes cnt3dFloatEnvelope {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+    100% { transform: translateY(-4px) rotate(-1deg); }
+  }
+
+  @keyframes cnt3dFloatPlane {
+    0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) translateX(8px) rotate(3deg); }
+    100% { transform: translateY(-3px) translateX(-4px) rotate(-2deg); }
+  }
+
+  @keyframes cnt3dWaPulse {
+    0% { box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35); }
+    50% { box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55); }
+    100% { box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35); }
+  }
+
+  @keyframes cnt3dRaySparkle {
+    0% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.8; transform: scale(1); }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     RESPONSIVE BREAKPOINTS
+     ══════════════════════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .cnt3d-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
     }
-
-    .btn-whatsapp:hover {
-
-      background: #1eb857;
-
-      transform: scale(1.01) translateY(-1px);
-
-      box-shadow: 0 20px 40px rgba(37,211,102,.28);
-
+    .cnt3d-float-plane {
+      display: none;
     }
-
-    .btn-whatsapp:focus-visible {
-
-      outline: 3px solid rgba(37,211,102,0.35);
-
-      outline-offset: 4px;
-
+    .cnt3d-float-envelope {
+      width: 100px;
+      height: 80px;
+      top: 20px;
+      right: 20px;
     }
-
-    
-
-    /* Contact Section */
-
-    .contact-main { padding: 100px 0; background: #fff; }
-
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
-
-    
-
-    /* Contact Info Panel */
-
-    .contact-info-panel { background: #F7F8FA; padding: 3rem; border-radius: 24px; }
-
-    .contact-info-item { display: flex; gap: 1.5rem; margin-bottom: 2rem; }
-
-    .contact-icon { width: 50px; height: 50px; background: #EAF3FF; color: #0F6FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-
-    .contact-icon svg { width: 24px; height: 24px; }
-
-    .contact-details h4 { font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: #0B1B35; margin-bottom: 0.5rem; }
-
-    .contact-details p { color: #6B7280; font-size: 0.95rem; line-height: 1.6; }
-
-    .contact-details a { color: #0F6FFF; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-
-    .contact-details a:hover { color: #0B1B35; }
-
-    
-
-    /* Contact Form Panel */
-
-    .contact-form-panel { padding: 1rem 0; }
-
-    .contact-form-panel h2 { font-family: 'Outfit', sans-serif; font-size: 2.2rem; color: #0B1B35; margin-bottom: 1rem; }
-
-    .contact-form-panel p { color: #6B7280; margin-bottom: 2rem; }
-
-    
-
-    .form-group { margin-bottom: 1.5rem; }
-
-    .form-group label { display: block; font-weight: 600; color: #0B1B35; margin-bottom: 0.5rem; font-size: 0.9rem; }
-
-    .form-control { width: 100%; padding: 14px 16px; border: 1px solid #E8EAED; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 1rem; color: #0B1B35; transition: border-color 0.3s; background: #F7F8FA; }
-
-    .form-control:focus { outline: none; border-color: #0F6FFF; background: #fff; box-shadow: 0 0 0 3px rgba(15,111,255,0.1); }
-
-    textarea.form-control { resize: vertical; min-height: 120px; }
-
-    
-
-    /* Map Section */
-
-    .map-section { padding-bottom: 100px; }
-
-    .map-container { width: 100%; height: 450px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #E8EAED; }
-
-    .map-container iframe { width: 100%; height: 100%; border: 0; }
-
-    
-
-    /* FAQ Section */
-
-    .faq-section { padding: 100px 0; background: #F7F8FA; }
-
-    .faq-container { max-width: 800px; margin: 0 auto; }
-
-    .faq-item { background: #fff; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.02); overflow: hidden; }
-
-    .faq-question { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: 600; color: #0B1B35; font-size: 1.1rem; }
-
-    .faq-icon { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; color: #0F6FFF; transition: transform 0.3s ease; }
-
-    .faq-item.active .faq-icon { transform: rotate(180deg); }
-
-    .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease; color: #6B7280; line-height: 1.6; }
-
-    .faq-item.active .faq-answer { padding-bottom: 1.5rem; max-height: 500px; }
-
-    
-
-    /* Founder Micro */
-
-    .founder-micro { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #E8EAED; display: flex; align-items: center; gap: 1rem; }
-
-    .founder-micro img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
-
-    
-
-    @media (max-width: 768px) {
-
-      .contact-grid { grid-template-columns: 1fr; }
-
-      .contact-info-panel { padding: 2rem; }
-
+    .cnt3d-form-card {
+      padding: 36px 32px;
     }
+  }
 
-  </style>
+  @media (max-width: 640px) {
+    .cnt3d-section {
+      padding: 60px 0 75px;
+    }
+    .cnt3d-form-row {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .cnt3d-info-card {
+      padding: 30px 20px 26px;
+      border-radius: 20px;
+    }
+    .cnt3d-form-card {
+      padding: 28px 20px;
+      border-radius: 20px;
+    }
+    .cnt3d-item {
+      padding: 14px 0;
+    }
+    .cnt3d-icon-box {
+      width: 40px;
+      height: 40px;
+    }
+    .cnt3d-icon-box svg {
+      width: 18px;
+      height: 18px;
+    }
+    .cnt3d-map-frame {
+      height: 320px;
+      border-radius: 18px;
+    }
+    .cnt3d-float-envelope {
+      display: none;
+    }
+  }
 
+  @media (prefers-reduced-motion: reduce) {
+    .cnt3d-float-envelope,
+    .cnt3d-float-plane,
+    .cnt3d-btn-whatsapp,
+    .cnt3d-rays {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+
+  
+  /* ══════════════════════════════════════════════════════════════════════════
+     FAQ SECTION (.faq-section)
+     ══════════════════════════════════════════════════════════════════════════ */
+  .faq-section {
+    padding: 85px 0 95px;
+    background: #F8FAFD;
+    position: relative;
+    border-top: 1px solid #EEF2F6;
+  }
+  .faq-section .section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 48px;
+  }
+  .faq-section .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0866F5;
+    background: rgba(8, 102, 245, 0.08);
+    border: 1px solid rgba(8, 102, 245, 0.2);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .faq-section .section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 2.7rem);
+    font-weight: 800;
+    color: #10213F;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .faq-container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .faq-item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    border: 1.5px solid #E2E8F0;
+    box-shadow: 0 4px 14px rgba(16, 33, 63, 0.03);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .faq-item:hover {
+    border-color: rgba(8, 102, 245, 0.35);
+    box-shadow: 0 8px 24px rgba(8, 102, 245, 0.08);
+    transform: translateY(-1px);
+  }
+  .faq-item.active {
+    border-color: #0866F5;
+    box-shadow: 0 10px 28px rgba(8, 102, 245, 0.1);
+  }
+  .faq-question {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: #10213F;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    user-select: none;
+    transition: color 0.2s ease;
+  }
+  .faq-item:hover .faq-question {
+    color: #0866F5;
+  }
+  .faq-item.active .faq-question {
+    color: #0866F5;
+  }
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    border-radius: 50%;
+    background: rgba(8, 102, 245, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0866F5;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, color 0.25s ease;
+    flex-shrink: 0;
+  }
+  .faq-icon svg {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    display: block;
+    stroke: currentColor;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+    background: #0866F5;
+    color: #FFFFFF;
+  }
+  .faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+    color: #64748B;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+  .faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.4rem;
+    max-height: 400px;
+  }
+
+  
+  /* Map Header Image Centered */
+  .cnt3d-map-header-centered {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 35px;
+    width: 100%;
+  }
+  .cnt3d-map-header-img {
+    max-width: 820px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+</style>
 </head>
-
 <body>
-
-  <!-- Cursor -->
-
-  <div id="cursor-dot"></div>
+<div id="cursor-dot"></div>
 
   <div id="cursor-ring"></div>
 
@@ -330,7 +1159,7 @@
 
     </a>
 
-    <a href="https://wa.me/919952065544" target="_blank">
+    <a href="https://wa.me/919952065544" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 
@@ -338,7 +1167,7 @@
 
     </a>
 
-    <a href="https://www.instagram.com/aaracomputers" target="_blank">
+    <a href="https://www.instagram.com/aaracomputers" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
 
@@ -455,277 +1284,403 @@
 
 
 
-  <!-- Page Hero Premium -->
+  
 
-  <header class="page-hero-premium" style="background-image: url('assets/images/contact-hero.png');">
+  <!-- =========================================================================
+       PREMIUM 3D CONTACT SECTION (.cnt3d-section) — EXACT REFERENCE MATCH
+       Ref: media_1793629388995_4afc65dd.png
+       ========================================================================= -->
+  <section class="cnt3d-section" id="contact-main" aria-label="Contact Information and Enquiry Form">
+    <!-- Top-Right Ribbon Wave -->
+    <svg class="cnt3d-wave-tr" viewBox="0 0 380 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,0 C140,50 250,20 380,160 L380,0 Z" fill="url(#wave-blue-tr)" opacity="0.95"/>
+      <path d="M80,0 C180,60 270,40 380,195 L380,0 Z" fill="url(#wave-yellow-tr)" opacity="0.95"/>
+      <defs>
+        <linearGradient id="wave-blue-tr" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#126BFF"/>
+          <stop offset="100%" stop-color="#00BAF2"/>
+        </linearGradient>
+        <linearGradient id="wave-yellow-tr" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFD000"/>
+          <stop offset="100%" stop-color="#FF9500"/>
+        </linearGradient>
+      </defs>
+    </svg>
 
-    <div class="page-hero-overlay"></div>
+    <!-- Bottom-Left Ribbon Wave -->
+    <svg class="cnt3d-wave-bl" viewBox="0 0 360 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,200 L0,50 C120,40 230,120 360,200 Z" fill="url(#wave-blue-bl)" opacity="0.95"/>
+      <path d="M0,200 L0,110 C100,100 200,160 300,200 Z" fill="url(#wave-yellow-bl)" opacity="0.95"/>
+      <defs>
+        <linearGradient id="wave-blue-bl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#126BFF"/>
+          <stop offset="100%" stop-color="#00BAF2"/>
+        </linearGradient>
+        <linearGradient id="wave-yellow-bl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFD000"/>
+          <stop offset="100%" stop-color="#FF9500"/>
+        </linearGradient>
+      </defs>
+    </svg>
 
-    <div class="page-hero-particles"></div>
+    <!-- Top-Left Dotted Trajectory -->
+    <svg class="cnt3d-dotted-arc" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="20" cy="20" r="4" fill="#00BAF2" opacity="0.6"/>
+      <circle cx="85" cy="45" r="3" fill="#00BAF2" opacity="0.4"/>
+      <path d="M10,130 C20,60 70,30 130,20" stroke="#00BAF2" stroke-width="1.5" stroke-dasharray="4,4" fill="none" opacity="0.5"/>
+    </svg>
 
-    <div class="container reveal">
+    <div class="cnt3d-container">
+      <div class="cnt3d-grid">
+        
+        <!-- ===================================================================
+             LEFT SIDE: 3D DEEP NAVY BLUE CONTACT PANEL
+             =================================================================== -->
+        <div class="cnt3d-info-card reveal-left">
+          <!-- 3D Curved Golden Ribbon Fold Top-Left -->
+          <div class="cnt3d-gold-ribbon" aria-hidden="true"></div>
+          
+          <!-- Bottom Cyan Wave Pedestal -->
+          <div class="cnt3d-card-wave-base" aria-hidden="true"></div>
 
-      <h1>Contact Us</h1>
-
-      <div style="margin-top:1rem;">
-
-        <span class="breadcrumb-premium"><a href="index.html">Home</a> <span>/</span> Contact</span>
-
-      </div>
-
-      <p style="color:rgba(255,255,255,0.75);margin-top:1rem;font-size:1.1rem;">We're Here to Help You</p>
-
-    </div>
-
-  </header>
-
-
-
-  <!-- Contact Section -->
-
-  <section class="contact-main">
-
-    <div class="container">
-
-      <div class="contact-grid">
-
-        <!-- Left: Info -->
-
-        <div class="contact-info-panel reveal-left">
-
-          <div class="contact-info-item">
-
-            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-
-            <div class="contact-details">
-
-              <h4>Our Location</h4>
-
-              <p>No.34/108, Gangai Amman Koil Street, (Next to Swimming Pool),<br/>Vadapalani, Chennai – 600026</p>
-
+          <!-- Contact Items List -->
+          <div class="cnt3d-items-list">
+            
+            <!-- 1. Our Location -->
+            <div class="cnt3d-item">
+              <div class="cnt3d-icon-squircle cnt3d-squircle-blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <span class="cnt3d-vbar cnt3d-vbar-blue"></span>
+              <div class="cnt3d-item-content">
+                <h4 class="cnt3d-item-title">Our Location</h4>
+                <p class="cnt3d-item-text">
+                  <a href="https://maps.google.com/?q=AARA+Computers+Vadapalani+Chennai" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF;text-decoration:none;">
+                    No.34/108, Gangai Amman Koil Street,<br/>
+                    (Next to Swimming Pool),<br/>
+                    Vadapalani, Chennai – 600026
+                  </a>
+                </p>
+              </div>
             </div>
 
-          </div>
+            <!-- Glowing Laser Divider -->
+            <div class="cnt3d-laser-divider" aria-hidden="true"></div>
 
-          
-
-          <div class="contact-info-item">
-
-            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-
-            <div class="contact-details">
-
-              <h4>Call or WhatsApp</h4>
-
-              <p><a href="tel:+919952065544">+91 99520 65544</a></p>
-
-              <p><a href="tel:+919445435755">+91 94454 35755</a></p>
-
+            <!-- 2. Call or WhatsApp -->
+            <div class="cnt3d-item">
+              <div class="cnt3d-icon-squircle cnt3d-squircle-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+              <span class="cnt3d-vbar cnt3d-vbar-green"></span>
+              <div class="cnt3d-item-content">
+                <h4 class="cnt3d-item-title">Call or WhatsApp</h4>
+                <a href="tel:+919952065544" class="cnt3d-cyan-text">+91 99520 65544</a>
+                <a href="tel:+919445435755" class="cnt3d-cyan-text">+91 94454 35755</a>
+              </div>
             </div>
 
-          </div>
+            <!-- Glowing Laser Divider -->
+            <div class="cnt3d-laser-divider" aria-hidden="true"></div>
 
-          
-
-          <div class="contact-info-item">
-
-            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-
-            <div class="contact-details">
-
-              <h4>Email Us</h4>
-
-              <p><a href="mailto:aaracomputers@gmail.com">aaracomputers@gmail.com</a></p>
-
+            <!-- 3. Email Us -->
+            <div class="cnt3d-item">
+              <div class="cnt3d-icon-squircle cnt3d-squircle-gold" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <span class="cnt3d-vbar cnt3d-vbar-gold"></span>
+              <div class="cnt3d-item-content">
+                <h4 class="cnt3d-item-title">Email Us</h4>
+                <a href="mailto:aaracomputers@gmail.com" class="cnt3d-cyan-text">aaracomputers@gmail.com</a>
+              </div>
             </div>
 
-          </div>
+            <!-- Glowing Laser Divider -->
+            <div class="cnt3d-laser-divider" aria-hidden="true"></div>
 
-          
-
-          <div class="contact-info-item">
-
-            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-
-            <div class="contact-details">
-
-              <h4>Working Hours</h4>
-
-              <p>Monday - Saturday: 9:00 AM – 9:00 PM</p>
-
-              <p>Sunday: Closed</p>
-
+            <!-- 4. Working Hours -->
+            <div class="cnt3d-item">
+              <div class="cnt3d-icon-squircle cnt3d-squircle-purple" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+              </div>
+              <span class="cnt3d-vbar cnt3d-vbar-purple"></span>
+              <div class="cnt3d-item-content">
+                <h4 class="cnt3d-item-title">Working Hours</h4>
+                <p class="cnt3d-item-text">Monday - Saturday: 9:00 AM – 9:00 PM</p>
+                <p class="cnt3d-item-text" style="color: #94A3B8;">Sunday: Closed</p>
+              </div>
             </div>
 
-          </div>
-
-          
-
-          <div class="founder-micro">
-
-             <img loading="lazy" decoding="async" src="assets/images/founder/founder-photo1.jpg" alt="Founder" />
-
-             <div>
-
-                <p style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #0B1B35; margin-bottom: 2px;">S. Mohideen Meeran</p>
-
-                <p style="color: #6B7280; font-size: 0.85rem; font-weight: 500;">Founder & MCT Certified Trainer</p>
-
-             </div>
+            <!-- Glowing Laser Divider -->
+            <div class="cnt3d-laser-divider" aria-hidden="true"></div>
 
           </div>
 
+          <!-- Founder Details at Bottom -->
+          <div class="cnt3d-founder-row">
+            <div class="cnt3d-founder-avatar-wrap">
+              <img src="assets/images/founder/founder-photo1.jpg" alt="S. Mohideen Meeran" loading="lazy" decoding="async" />
+            </div>
+            <div class="cnt3d-founder-info">
+              <div class="cnt3d-founder-name-wrap">
+                <h4 class="cnt3d-founder-name">S. Mohideen Meeran</h4>
+                <span class="cnt3d-award-rosette" title="Best Teacher Award Recipient">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107">
+                    <path d="M12 1L15.09 5.26L20.18 6.18L17.55 10.74L18.47 15.82L13.38 15.09L10.62 19.35L8.71 14.74L3.62 13.82L6.25 9.26L5.33 4.18L10.42 4.91L12 1Z"/>
+                    <circle cx="12" cy="10" r="3.5" fill="#FFA000"/>
+                  </svg>
+                </span>
+              </div>
+              <p class="cnt3d-founder-sub">Founder & MCP Certified Trainer</p>
+            </div>
+          </div>
         </div>
 
-        
-
-        <!-- Right: Form -->
-
-        <div class="contact-form-panel reveal-right">
-
-          <h2>Send us a Message</h2>
-
-          <p>Fill out the form below to inquire about admissions or IT services. We typically respond within 24 hours.</p>
-
+        <!-- ===================================================================
+             RIGHT SIDE: ENQUIRY FORM & 3D ARTWORK
+             =================================================================== -->
+        <div class="cnt3d-form-wrap reveal-right">
           
+          <!-- Top 3D Floating Illustrations (Plane + Dotted Trail + 3D Envelope) -->
+          <div class="cnt3d-top-artwork" aria-hidden="true">
+            <svg viewBox="0 0 260 170" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Dotted Flight Trajectory Loop -->
+              <path d="M5,135 C35,140 50,80 85,95 C115,108 95,160 50,140 C20,128 35,45 130,25" stroke="#126BFF" stroke-width="2.5" stroke-dasharray="5,5" fill="none" stroke-linecap="round"/>
+              <!-- 3D Blue Paper Plane -->
+              <g transform="translate(115, 8) rotate(-10)">
+                <path d="M0,25 L45,0 L20,38 L14,26 Z" fill="#2563EB"/>
+                <path d="M45,0 L14,26 L26,27 Z" fill="#1D4ED8"/>
+                <path d="M14,26 L20,38 L17,30 Z" fill="#1E40AF"/>
+                <path d="M0,25 L45,0 L14,26 Z" fill="#3B82F6"/>
+              </g>
+              <!-- 3D Yellow Open Envelope with Paper popping out -->
+              <g transform="translate(145, 18)">
+                <!-- Ambient Glow behind envelope -->
+                <ellipse cx="60" cy="85" rx="50" ry="25" fill="#38BDF8" opacity="0.25"/>
+                <!-- Popping Letter Paper -->
+                <rect x="25" y="10" width="56" height="60" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.08))"/>
+                <rect x="33" y="22" width="38" height="4" rx="2" fill="#0284C7"/>
+                <rect x="33" y="30" width="38" height="4" rx="2" fill="#0284C7"/>
+                <rect x="33" y="38" width="28" height="4" rx="2" fill="#0284C7"/>
+                <rect x="33" y="46" width="34" height="4" rx="2" fill="#0284C7"/>
+                <!-- Envelope Body -->
+                <path d="M5,42 L55,80 L105,42 L105,96 C105,102 100,107 94,107 L16,107 C10,107 5,102 5,96 Z" fill="#F59E0B" filter="drop-shadow(0 8px 16px rgba(217, 119, 6, 0.3))"/>
+                <path d="M5,42 L55,80 L105,42 L55,42 Z" fill="#FBBF24"/>
+                <path d="M5,96 L42,66 L5,42 Z" fill="#D97706" opacity="0.3"/>
+                <path d="M105,96 L68,66 L105,42 Z" fill="#D97706" opacity="0.3"/>
+                <path d="M5,107 L55,75 L105,107 Z" fill="#F59E0B"/>
+                <!-- Radiant Yellow Sparks around envelope -->
+                <line x1="112" y1="36" x2="120" y2="30" stroke="#FFBF00" stroke-width="3" stroke-linecap="round"/>
+                <line x1="118" y1="52" x2="128" y2="52" stroke="#FFBF00" stroke-width="3" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Outlined Top Badge -->
+          <div class="cnt3d-badge-outline">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <span>GET IN TOUCH</span>
+          </div>
+
+          <!-- Form Heading with Radiant Sparks and Underline -->
+          <div class="cnt3d-form-heading">
+            <h2 class="cnt3d-main-title">
+              Send us a <span class="cnt3d-title-message">Message<span class="cnt3d-title-underline"></span></span>
+            </h2>
+            <!-- Spark Rays -->
+            <svg class="cnt3d-ray-top-left" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <line x1="8" y1="14" x2="3" y2="8" stroke="#FFBF00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="14" y1="8" x2="12" y2="2" stroke="#FFBF00" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <svg class="cnt3d-ray-top-right" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <line x1="4" y1="10" x2="10" y2="5" stroke="#FFBF00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="8" y1="16" x2="16" y2="15" stroke="#FFBF00" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <p class="cnt3d-form-subtitle">
+            Fill out the form below to inquire about admissions or IT services.<br/>
+            We typically respond within 24 hours.
+          </p>
 
           <form id="whatsapp-form" action="#" method="POST" novalidate>
+            <div class="cnt3d-form-fields">
+              
+              <!-- Row 1: Full Name & Phone Number -->
+              <div class="cnt3d-input-row">
+                <div class="cnt3d-field">
+                  <label for="name" class="cnt3d-field-label">
+                    <span class="cnt3d-lbl-icon cnt3d-lbl-cyan">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </span>
+                    Full Name <span style="color:#EF4444;">*</span>
+                  </label>
+                  <div class="cnt3d-input-box">
+                    <svg class="cnt3d-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <input type="text" id="name" name="name" class="cnt3d-control" required placeholder="John Doe" autocomplete="name" />
+                  </div>
+                </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-
-              <div class="form-group">
-
-                <label for="name">Full Name *</label>
-
-                <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe" />
-
+                <div class="cnt3d-field">
+                  <label for="phone" class="cnt3d-field-label">
+                    <span class="cnt3d-lbl-icon cnt3d-lbl-cyan">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </span>
+                    Phone Number <span style="color:#EF4444;">*</span>
+                  </label>
+                  <div class="cnt3d-input-box">
+                    <svg class="cnt3d-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <input type="tel" id="phone" name="phone" class="cnt3d-control" required placeholder="+91 98765 43210" autocomplete="tel" />
+                  </div>
+                </div>
               </div>
 
-              <div class="form-group">
+              <!-- Row 2: Email Address -->
+              <div class="cnt3d-field">
+                <label for="email" class="cnt3d-field-label">
+                  <span class="cnt3d-lbl-icon cnt3d-lbl-purple">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                  </span>
+                  Email Address
+                </label>
+                <div class="cnt3d-input-box">
+                  <svg class="cnt3d-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <input type="email" id="email" name="email" class="cnt3d-control" placeholder="john@example.com" autocomplete="email" />
+                </div>
+              </div>
 
-                <label for="phone">Phone Number *</label>
+              <!-- Row 3: Interested In -->
+              <div class="cnt3d-field">
+                <label for="interest" class="cnt3d-field-label">
+                  <span class="cnt3d-lbl-icon cnt3d-lbl-cyan">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9.07l-9-7-9 7 1.63 1.27L12 16z"/></svg>
+                  </span>
+                  I am interested in <span style="color:#EF4444;">*</span>
+                </label>
+                <div class="cnt3d-input-box">
+                  <select id="interest" name="interest" class="cnt3d-control cnt3d-select" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <optgroup label="Popular Courses">
+                      <option value="Office Automation (CCA)">Office Automation (CCA)</option>
+                      <option value="Tally Prime with GST">Tally Prime with GST</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Web Development">Web Development</option>
+                      <option value="Python Programming">Python Programming</option>
+                      <option value="Java Full Stack">Java Full Stack</option>
+                      <option value="C & C++ Programming">C & C++ Programming</option>
+                      <option value="DTP Designing">DTP Designing (Photoshop / CorelDraw)</option>
+                    </optgroup>
+                    <optgroup label="Professional IT Services">
+                      <option value="Laptop & Desktop Service">Laptop & Desktop Service / Repair</option>
+                      <option value="CCTV Installation & Maintenance">CCTV Installation & Security</option>
+                      <option value="Networking & Wi-Fi Solutions">Networking & Wi-Fi Solutions</option>
+                      <option value="AMC Services">Annual Maintenance Contracts (AMC)</option>
+                      <option value="Web Development Services">Custom Website Development</option>
+                    </optgroup>
+                  </select>
+                  <svg class="cnt3d-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
 
-                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+91 98765 43210" />
+              <!-- Row 4: Message -->
+              <div class="cnt3d-field">
+                <label for="message" class="cnt3d-field-label">
+                  <span class="cnt3d-lbl-icon cnt3d-lbl-green">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                  </span>
+                  Message <span style="color:#EF4444;">*</span>
+                </label>
+                <div class="cnt3d-input-box cnt3d-textarea-box">
+                  <svg class="cnt3d-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                  <textarea id="message" name="message" class="cnt3d-control cnt3d-textarea" required placeholder="How can we help you?"></textarea>
+                </div>
+              </div>
 
+              <!-- Feedback Banner -->
+              <div id="form-feedback" class="cnt3d-feedback" role="alert" aria-live="assertive"></div>
+
+              <!-- Submit Button with Concentric Cyan Ripple Rings & Click Pointer -->
+              <div class="cnt3d-btn-center">
+                <div class="cnt3d-btn-pulse-wrap">
+                  <span class="cnt3d-ripple-ring"></span>
+                  <span class="cnt3d-ripple-ring"></span>
+                  <button type="submit" id="btn-submit-whatsapp" class="cnt3d-btn-whatsapp-action">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>Send via WhatsApp &rarr;</span>
+                  </button>
+                  <!-- Hand Pointer with Yellow Click Rays -->
+                  <div class="cnt3d-click-hand" aria-hidden="true">
+                    <svg viewBox="0 0 52 52" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Yellow Click Rays -->
+                      <line x1="16" y1="18" x2="10" y2="15" stroke="#FFD000" stroke-width="3" stroke-linecap="round"/>
+                      <line x1="22" y1="12" x2="22" y2="5" stroke="#FFD000" stroke-width="3" stroke-linecap="round"/>
+                      <line x1="28" y1="18" x2="34" y2="15" stroke="#FFD000" stroke-width="3" stroke-linecap="round"/>
+                      <!-- Hand Pointer -->
+                      <g transform="translate(14, 16)">
+                        <path d="M7 2 L7 18 L10.5 14.5 L14 23 L17.5 21.5 L14 13 L19 13 Z" fill="#FFFFFF" stroke="#10213F" stroke-width="2" stroke-linejoin="round"/>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
               </div>
 
             </div>
-
-            
-
-            <div class="form-group">
-
-              <label for="email">Email Address</label>
-
-              <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" />
-
-            </div>
-
-            
-
-            <div class="form-group">
-
-              <label for="interest">I am interested in *</label>
-
-              <select id="interest" name="interest" class="form-control" required style="cursor: pointer;">
-
-                <option value="" disabled selected>Select an option...</option>
-
-                <optgroup label="Courses">
-
-                  <option value="Course: Office Automation">Office Automation (CCA)</option>
-
-                  <option value="Course: Tally Prime">Tally Prime with GST</option>
-
-                  <option value="Course: Digital Marketing">Digital Marketing</option>
-
-                  <option value="Course: Web Development">Web Development</option>
-
-                  <option value="Course: Python">Python Programming</option>
-
-                  <option value="Course: Java">Java Programming</option>
-
-                  <option value="Course: C/C++">C & C++ Programming</option>
-
-                  <option value="Course: DTP">Designing & Printing (DTP)</option>
-
-                  <option value="Course: Hardware Networking">Hardware & Networking</option>
-
-                  <option value="Course: CCTV">CCTV Installation</option>
-
-                </optgroup>
-
-                <optgroup label="IT Services">
-
-                  <option value="Service: IT Support">General IT Support</option>
-
-                  <option value="Service: Web Dev">Web Development Services</option>
-
-                  <option value="Service: Digital Marketing">Digital Marketing Services</option>
-
-                  <option value="Service: Networking">Networking Setup</option>
-
-                  <option value="Service: Hardware Purchase">Computer/Laptop Purchase</option>
-
-                </optgroup>
-
-              </select>
-
-            </div>
-
-            
-
-            <div class="form-group">
-
-              <label for="message">Message *</label>
-
-              <textarea id="message" name="message" class="form-control" required placeholder="How can we help you?"></textarea>
-
-            </div>
-
-            
-
-            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
-
-            <button type="submit" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 16px;">Send via WhatsApp</button>
-
           </form>
 
           <div id="wa-toast" class="wa-toast" aria-live="polite" aria-atomic="true"></div>
-
         </div>
 
       </div>
-
     </div>
-
   </section>
 
+  <!-- =========================================================================
+       MAP SECTION (.cnt3d-map-section) — REFERENCE MATCH
+       ========================================================================= -->
+  <section class="cnt3d-map-section" id="map-location" aria-label="Our Location on Map">
+    <div class="cnt3d-container">
+      
+      <!-- Section Header Matching Reference Image -->
+      <div class="cnt3d-map-header-centered reveal">
+        <img 
+          src="assets/images/location-map-header.png" 
+          alt="Our Location on Map – Visit AARA Computers at our Vadapalani, Chennai centre. We're easy to find!" 
+          class="cnt3d-map-header-img"
+          width="889"
+          height="174"
+        />
+        
+      </div>
 
-
-  <!-- Map Section -->
-
-  <section class="map-section">
-
-    <div class="container reveal">
-
-      <div class="map-container">
-
-        <!-- Embed Google Map -->
-
-        <iframe src="https://maps.google.com/maps?q=Aara%20Computers,%20Vadapalani,%20Chennai&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+      <!-- Styled Map Frame -->
+      <div class="cnt3d-map-frame reveal">
+        <iframe 
+          src="https://maps.google.com/maps?q=Aara%20Computers,%20Vadapalani,%20Chennai&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="AARA Computers Google Map Location in Vadapalani, Chennai">
+        </iframe>
       </div>
 
     </div>
-
   </section>
 
-
-
-  <!-- FAQ Section -->
-
-  <section class="faq-section">
+<section class="faq-section">
 
     <div class="container">
 
@@ -737,15 +1692,15 @@
 
       </div>
 
-      <div class="faq-container reveal">
+      <div class="faq-container">
 
-        <div class="faq-item">
+        <div class="faq-item active">
 
           <div class="faq-question">
 
             Do you provide placement assistance?
 
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
 
           </div>
 
@@ -765,7 +1720,7 @@
 
             Are the certifications recognized?
 
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
 
           </div>
 
@@ -785,7 +1740,7 @@
 
             Do you have weekend batches?
 
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
 
           </div>
 
@@ -805,7 +1760,7 @@
 
             Do you sell refurbished laptops?
 
-            <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
 
           </div>
 
@@ -822,146 +1777,109 @@
     </div>
 
   </section>
+<footer class="ftr3d-footer" role="contentinfo">
+    <div class="ftr3d-container">
+      <div class="ftr3d-grid">
 
-
-
-  <!-- ══════════════════════════════════════
-
-       FOOTER
-
-  ══════════════════════════════════════ -->
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-
-          <img loading="lazy" decoding="async" src="assets/images/logo/company-logo.png" alt="AARA Computers" />
-
-          <p>Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.</p>
-
-          <div class="footer-social">
-
-            <a href="https://www.instagram.com/aaracomputers" target="_blank" title="Instagram">
-
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-
+        <!-- COLUMN 1: Company Info -->
+        <div class="ftr3d-col ftr3d-col-brand">
+          <a href="index.html" class="ftr3d-logo-link" aria-label="AARA Computers Home">
+            <img loading="lazy" decoding="async" src="assets/images/logo/company-logo.png" alt="AARA Computers Logo" class="ftr3d-logo"/>
+          </a>
+          <p class="ftr3d-brand-desc">
+            Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.
+          </p>
+          <div class="ftr3d-social-row">
+            <a href="https://www.instagram.com/aaracomputers" target="_blank" rel="noopener noreferrer" class="ftr3d-social-btn" title="Follow us on Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
             </a>
-
-            <a href="https://wa.me/919952065544" target="_blank" title="WhatsApp">
-
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+            <a href="https://wa.me/919952065544" target="_blank" rel="noopener noreferrer" class="ftr3d-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
             </a>
-
-            <a href="tel:+919952065544" title="Call Us">
-
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-
+            <a href="tel:+919952065544" class="ftr3d-social-btn" title="Call Us" aria-label="Call">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
             </a>
-
           </div>
-
         </div>
 
-        <div class="footer-col">
-
-          <h4>Quick Links</h4>
-
-          <ul>
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="about.html">About Us</a></li>
-
-            <li><a href="courses.html">Our Courses</a></li>
-
-            <li><a href="services.html">IT Services</a></li>
-
-            <li><a href="gallery.html">Gallery</a></li>
-<li><a href="media.html">Media</a></li>
-
-            <li><a href="contact.html">Contact Us</a></li>
-
+        <!-- COLUMN 2: Quick Links -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">QUICK LINKS</h4>
+          <ul class="ftr3d-link-list">
+            <li><a href="index.html"><span class="ftr3d-arrow">▸</span> Home</a></li>
+            <li><a href="about.html"><span class="ftr3d-arrow">▸</span> About Us</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Our Courses</a></li>
+            <li><a href="services.html?v=2"><span class="ftr3d-arrow">▸</span> IT Services</a></li>
+            <li><a href="gallery.html"><span class="ftr3d-arrow">▸</span> Gallery</a></li>
+            <li><a href="media.html"><span class="ftr3d-arrow">▸</span> Media</a></li>
+            <li><a href="contact.html"><span class="ftr3d-arrow">▸</span> Contact Us</a></li>
           </ul>
-
         </div>
 
-        <div class="footer-col">
-
-          <h4>Popular Courses</h4>
-
-          <ul>
-
-            <li><a href="courses.html">Office Automation (CCA)</a></li>
-
-            <li><a href="courses.html">Tally Prime with GST</a></li>
-
-            <li><a href="courses.html">Digital Marketing</a></li>
-
-            <li><a href="courses.html">Web Development</a></li>
-
-            <li><a href="courses.html">Python Programming</a></li>
-
-            <li><a href="courses.html">CCTV Installation</a></li>
-
+        <!-- COLUMN 3: Popular Courses -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">POPULAR COURSES</h4>
+          <ul class="ftr3d-link-list">
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Office Automation (CCA)</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Tally Prime with GST</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Digital Marketing</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Web Development</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Python Programming</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> CCTV Installation</a></li>
           </ul>
-
         </div>
 
-        <div class="footer-col">
+        <!-- COLUMN 4: Contact Info -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">CONTACT INFO</h4>
+          <div class="ftr3d-contact-list">
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
+            </div>
 
-          <h4>Contact Info</h4>
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              <span>
+                <a href="tel:+919952065544">99520 65544</a> / <a href="tel:+919445435755">94454 35755</a>
+              </span>
+            </div>
 
-          <div class="footer-contact-item">
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:aaracomputers@gmail.com">aaracomputers@gmail.com</a>
+            </div>
 
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-
-            <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
-
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Mon–Sat: 9:00 AM – 9:00 PM<br><span style="color:#F59E0B;">Sunday: Closed</span></span>
+            </div>
           </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-
-            <span><a href="tel:+919952065544" style="color:inherit;">99520 65544</a> / <a href="tel:+919445435755" style="color:inherit;">94454 35755</a></span>
-
-          </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-
-            <a href="mailto:aaracomputers@gmail.com" style="color:inherit;">aaracomputers@gmail.com</a>
-
-          </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-
-            <span>Mon–Sat: 9:00 AM – 9:00 PM<br/>Sunday: Closed</span>
-
-          </div>
-
         </div>
 
       </div>
 
-      <div class="footer-bottom">
-
-        <span>© 2024 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
-
-        
-
+      <div class="ftr3d-bottom">
+        <span class="ftr3d-copy">© 2026 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
       </div>
-
     </div>
-
   </footer>
 
 
@@ -970,7 +1888,7 @@
 
   <div class="fab-container">
 
-    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank">
+    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 
@@ -991,244 +1909,156 @@
 
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/premium.js" defer></script>
 
+  
   <script>
-
     document.addEventListener('DOMContentLoaded', () => {
-
       // FAQ Accordion Logic
-
       const faqItems = document.querySelectorAll('.faq-item');
-
-      
-
       faqItems.forEach(item => {
-
         const question = item.querySelector('.faq-question');
-
-        
-
-        question.addEventListener('click', () => {
-
+        question?.addEventListener('click', () => {
           const isActive = item.classList.contains('active');
-
-          
-
-          // Close all
-
           faqItems.forEach(faq => faq.classList.remove('active'));
-
-          
-
-          // Toggle current
-
           if (!isActive) {
-
             item.classList.add('active');
-
           }
-
         });
-
       });
 
-      
-
-      // Auto-select course from URL parameter if present
-
+      // Auto-select course from URL parameter if present (?course=Tally)
       const urlParams = new URLSearchParams(window.location.search);
-
       const courseParam = urlParams.get('course');
-
-      
-
-      if(courseParam) {
-
-          const select = document.getElementById('interest');
-
-          // Find option that contains the course name
-
-          for(let i=0; i<select.options.length; i++) {
-
-              if(select.options[i].value.includes(courseParam) || select.options[i].text.includes(courseParam)) {
-
-                  select.selectedIndex = i;
-
-                  break;
-
-              }
-
+      if (courseParam) {
+        const select = document.getElementById('interest');
+        if (select) {
+          const query = courseParam.toLowerCase();
+          for (let i = 0; i < select.options.length; i++) {
+            const optVal = select.options[i].value.toLowerCase();
+            const optText = select.options[i].text.toLowerCase();
+            if (optVal.includes(query) || optText.includes(query)) {
+              select.selectedIndex = i;
+              break;
+            }
           }
-
+        }
       }
 
-
-
+      // WhatsApp Form Handler
       const form = document.getElementById('whatsapp-form');
-
       const feedback = document.getElementById('form-feedback');
-
       const toast = document.getElementById('wa-toast');
-
       const whatsappNumber = '919952065544';
 
-
-
       function showToast(message) {
-
         if (!toast) return;
-
         toast.textContent = message;
-
         toast.classList.add('show');
-
-        setTimeout(() => toast.classList.remove('show'), 1100);
-
+        setTimeout(() => toast.classList.remove('show'), 2000);
       }
 
-
-
-      function setError(message) {
-
+      function setError(message, fieldElement) {
         if (!feedback) return;
-
-        feedback.textContent = message;
-
-        feedback.classList.remove('success');
-
+        feedback.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> ' + message;
+        feedback.className = 'cnt3d-feedback show-error';
+        if (fieldElement) {
+          fieldElement.classList.add('is-invalid');
+          fieldElement.focus();
+        }
       }
-
-
 
       function setSuccess(message) {
-
         if (!feedback) return;
-
-        feedback.textContent = message;
-
-        feedback.classList.add('success');
-
+        feedback.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> ' + message;
+        feedback.className = 'cnt3d-feedback show-success';
       }
 
+      function clearFeedback() {
+        if (!feedback) return;
+        feedback.className = 'cnt3d-feedback';
+        feedback.innerHTML = '';
+        document.querySelectorAll('.cnt3d-input').forEach(input => input.classList.remove('is-invalid'));
+      }
 
+      // Clear validation state on input typing
+      document.querySelectorAll('.cnt3d-input').forEach(input => {
+        input.addEventListener('input', () => {
+          input.classList.remove('is-invalid');
+          if (feedback && feedback.classList.contains('show-error')) {
+            feedback.className = 'cnt3d-feedback';
+            feedback.innerHTML = '';
+          }
+        });
+      });
 
       function isValidPhone(value) {
-
         const digits = value.replace(/\D/g, '');
-
         return digits.length >= 10;
-
       }
-
-
 
       function buildWhatsappUrl(values) {
+        const message = "New Enquiry – AARA Computers\n" +
+          "Name: " + values.name + "\n" +
+          "Phone: " + values.phone + "\n" +
+          "Email: " + (values.email || 'N/A') + "\n" +
+          "Interested In: " + values.interest + "\n" +
+          "Message: " + values.message;
 
-        const message = `Hello AARA Computers,\n\nI would like to enquire about your course.\n\nName: ${values.name}\n\nPhone: ${values.phone}\n\nEmail: ${values.email || 'N/A'}\n\nCourse Interested: ${values.interest}\n\nMessage: ${values.message}\n\nThank you.`;
-
-        return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
+        return "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
       }
 
-
-
       form?.addEventListener('submit', (event) => {
-
         event.preventDefault();
+        clearFeedback();
 
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+        const interestInput = document.getElementById('interest');
+        const messageInput = document.getElementById('message');
 
+        const name = nameInput?.value.trim();
+        const phone = phoneInput?.value.trim();
+        const email = emailInput?.value.trim();
+        const interest = interestInput?.value;
+        const message = messageInput?.value.trim();
 
-        const name = document.getElementById('name')?.value.trim();
-
-        const phone = document.getElementById('phone')?.value.trim();
-
-        const email = document.getElementById('email')?.value.trim();
-
-        const interest = document.getElementById('interest')?.value;
-
-        const message = document.getElementById('message')?.value.trim();
-
-
-
-        if (!name) {
-
-          setError('Please enter your full name.');
-
-          document.getElementById('name')?.focus();
-
+        if (!name || name.length < 2) {
+          setError('Please enter your full name (at least 2 characters).', nameInput);
           return;
-
         }
-
-
 
         if (!phone || !isValidPhone(phone)) {
-
-          setError('Please enter a valid phone number with at least 10 digits.');
-
-          document.getElementById('phone')?.focus();
-
+          setError('Please enter a valid phone number with at least 10 digits.', phoneInput);
           return;
-
         }
-
-
 
         if (!interest) {
-
-          setError('Please select the course or service you are interested in.');
-
-          document.getElementById('interest')?.focus();
-
+          setError('Please select the course or service you are interested in.', interestInput);
           return;
-
         }
 
-
-
-        if (!message) {
-
-          setError('Please enter your enquiry message.');
-
-          document.getElementById('message')?.focus();
-
+        if (!message || message.length < 5) {
+          setError('Please enter your enquiry message (at least 5 characters).', messageInput);
           return;
-
         }
 
-
-
-        setSuccess('Redirecting to WhatsApp...');
-
-        showToast('Redirecting to WhatsApp...');
-
-
+        setSuccess('Opening WhatsApp with your prefilled message...');
+        showToast('Opening WhatsApp...');
 
         const whatsappUrl = buildWhatsappUrl({ name, phone, email, interest, message });
 
-
-
         setTimeout(() => {
-
           try {
-
-            window.open(whatsappUrl, '_blank');
-
-          } catch (error) {
-
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+          } catch (e) {
             window.location.href = whatsappUrl;
-
           }
-
-        }, 400);
-
+        }, 350);
       });
-
     });
-
   </script>
 
 </body>
-
 </html>
-

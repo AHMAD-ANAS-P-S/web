@@ -1,8 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
 
   <meta charset="UTF-8" />
 
@@ -71,6 +75,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/premium.css" />
 
   <style>
 
@@ -112,7 +117,7 @@
 
     /* Services Intro */
 
-    .services-intro { padding: 100px 0; background: #fff; }
+    .services-intro { padding: calc(40px + var(--nav-h) + 40px) 0 80px; background: #fff; }
 
     .services-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 
@@ -158,6 +163,865 @@
 
     }
 
+  
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PROFESSIONAL IT SERVICES - 3D MODERN WHITE THEME REDESIGN (.its3d-*)
+   ══════════════════════════════════════════════════════════════════════════ */
+.its3d-section {
+  background: #FFFFFF !important;
+  position: relative !important;
+  padding: calc(40px + var(--nav-h) + 40px) 0 120px !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  font-family: inherit !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Background Soft Ambient Layers */
+.its3d-bg-accent {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 15%, #F0F7FF 0%, transparent 50%),
+              radial-gradient(circle at 85% 85%, #F4F9FF 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, #FFFFFF 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Background Corner Swooshes & Waves (Reference Image Match) */
+.its3d-wave-tl {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 320px;
+  height: 240px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.its3d-wave-br {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 340px;
+  height: 250px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Dot Patterns */
+.its3d-dots-bl {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 140px;
+  height: 110px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.its3d-dots-tr {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 130px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Container */
+.its3d-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Area */
+.its3d-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 55px;
+  position: relative;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Badge with Flanking Lines */
+.its3d-badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.its3d-badge-line-left {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0866F5);
+  border-radius: 999px;
+  position: relative;
+}
+.its3d-badge-line-left::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: #0866F5;
+  border-radius: 50%;
+}
+
+.its3d-badge-line-right {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #FFC928, transparent);
+  border-radius: 999px;
+  position: relative;
+}
+.its3d-badge-line-right::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: #FFC928;
+  border-radius: 50%;
+}
+
+.its3d-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0866F5 0%, #19B9EE 100%);
+  color: #FFFFFF;
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(8, 102, 245, 0.28);
+}
+
+.its3d-badge-icon {
+  font-size: 1rem;
+}
+
+/* Main Heading */
+.its3d-title-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.its3d-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-weight: 800;
+  color: #10213F;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.its3d-title-gradient {
+  background: linear-gradient(135deg, #0866F5 0%, #19B9EE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* Golden Ray / Spark Accents above "IT Services" */
+.its3d-sparks {
+  position: absolute;
+  top: -14px;
+  right: -24px;
+  width: 32px;
+  height: 22px;
+  pointer-events: none;
+}
+
+.its3d-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: #64748B;
+  margin: 16px auto 0;
+  line-height: 1.6;
+  max-width: 660px;
+}
+
+/* Grid Layout */
+.its3d-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Service Card Styles */
+.its3d-card {
+  background: #FFFFFF !important;
+  border-radius: 26px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  opacity: 1 !important;
+  visibility: visible !important;
+  cursor: pointer;
+}
+
+/* Card Specific Themes (Border, Corner, Accents, Glows) */
+.its3d-card-blue {
+  --c-accent: #0866F5;
+  --c-accent-grad: linear-gradient(135deg, #0866F5 0%, #19B9EE 100%);
+  --c-border: rgba(8, 102, 245, 0.22);
+  --c-glow: rgba(8, 102, 245, 0.16);
+  --c-stage: rgba(240, 247, 255, 0.85);
+  border: 1.5px solid var(--c-border);
+  box-shadow: 0 10px 30px -4px rgba(16, 33, 63, 0.06), 0 4px 12px -2px rgba(8, 102, 245, 0.05);
+}
+
+.its3d-card-yellow {
+  --c-accent: #F59E0B;
+  --c-accent-grad: linear-gradient(135deg, #F59E0B 0%, #FFC928 100%);
+  --c-border: rgba(245, 158, 11, 0.26);
+  --c-glow: rgba(245, 158, 11, 0.18);
+  --c-stage: rgba(255, 251, 235, 0.85);
+  border: 1.5px solid var(--c-border);
+  box-shadow: 0 10px 30px -4px rgba(16, 33, 63, 0.06), 0 4px 12px -2px rgba(245, 158, 11, 0.05);
+}
+
+.its3d-card-purple {
+  --c-accent: #8B5CF6;
+  --c-accent-grad: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+  --c-border: rgba(139, 92, 246, 0.24);
+  --c-glow: rgba(139, 92, 246, 0.18);
+  --c-stage: rgba(245, 243, 255, 0.85);
+  border: 1.5px solid var(--c-border);
+  box-shadow: 0 10px 30px -4px rgba(16, 33, 63, 0.06), 0 4px 12px -2px rgba(139, 92, 246, 0.05);
+}
+
+.its3d-card-green {
+  --c-accent: #12B76A;
+  --c-accent-grad: linear-gradient(135deg, #12B76A 0%, #34D399 100%);
+  --c-border: rgba(18, 183, 106, 0.24);
+  --c-glow: rgba(18, 183, 106, 0.18);
+  --c-stage: rgba(240, 253, 244, 0.85);
+  border: 1.5px solid var(--c-border);
+  box-shadow: 0 10px 30px -4px rgba(16, 33, 63, 0.06), 0 4px 12px -2px rgba(18, 183, 106, 0.05);
+}
+
+.its3d-card-cyan {
+  --c-accent: #0284C7;
+  --c-accent-grad: linear-gradient(135deg, #0284C7 0%, #38BDF8 100%);
+  --c-border: rgba(2, 132, 199, 0.24);
+  --c-glow: rgba(2, 132, 199, 0.18);
+  --c-stage: rgba(240, 249, 255, 0.85);
+  border: 1.5px solid var(--c-border);
+  box-shadow: 0 10px 30px -4px rgba(16, 33, 63, 0.06), 0 4px 12px -2px rgba(2, 132, 199, 0.05);
+}
+
+.its3d-card-pink {
+  --c-accent: #EC4899;
+  --c-accent-grad: linear-gradient(135deg, #EC4899 0%, #F472B6 100%);
+  --c-border: rgba(236, 72, 153, 0.24);
+  --c-glow: rgba(236, 72, 153, 0.18);
+  --c-stage: rgba(253, 242, 248, 0.85);
+  border: 1.5px solid var(--c-border);
+  box-shadow: 0 10px 30px -4px rgba(16, 33, 63, 0.06), 0 4px 12px -2px rgba(236, 72, 153, 0.05);
+}
+
+/* Card Hover Lift & Glow */
+.its3d-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px -8px var(--c-glow), 0 10px 24px -4px rgba(16, 33, 63, 0.08);
+  border-color: var(--c-accent);
+}
+
+/* Top-Left Smooth Curved Corner Accent (Reference Image Match) */
+.its3d-corner-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 74px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Card Upper Stage (Illustration Area) */
+.its3d-stage {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px 8px;
+  background: var(--c-stage);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  overflow: hidden;
+}
+
+.its3d-stage-glow {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--c-accent) 0%, transparent 70%);
+  opacity: 0.15;
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.its3d-art {
+  width: 100%;
+  max-width: 240px;
+  height: 165px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.its3d-card:hover .its3d-art {
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* Card Content Area */
+.its3d-content {
+  padding: 24px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Title Row with Vertical Pill Bar */
+.its3d-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.its3d-bar {
+  width: 5px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--c-accent-grad);
+  flex-shrink: 0;
+}
+
+.its3d-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #10213F;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Card Footer / Desc Row */
+.its3d-desc-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.its3d-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #64748B;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Circular Arrow Button (Reference Image Match) */
+.its3d-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--c-accent-grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--c-glow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.its3d-card:hover .its3d-arrow-btn {
+  transform: translateX(3px) scale(1.08);
+  box-shadow: 0 6px 16px var(--c-glow);
+}
+
+.its3d-arrow-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: #FFFFFF;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* Bottom CTA Button (View All IT Services) */
+.its3d-cta-wrap {
+  text-align: center;
+  margin-top: 55px;
+  position: relative;
+  z-index: 2;
+}
+
+.its3d-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #0866F5 0%, #0052CC 100%);
+  color: #FFFFFF !important;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 16px 38px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(8, 102, 245, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.its3d-cta-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(8, 102, 245, 0.45);
+  background: linear-gradient(135deg, #0971FF 0%, #0047B3 100%);
+}
+
+.its3d-btn-icon {
+  font-size: 1.15rem;
+}
+
+.its3d-btn-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.25s ease;
+}
+
+.its3d-cta-btn:hover .its3d-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .its3d-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .its3d-section {
+    padding: 80px 0 90px !important;
+  }
+  .its3d-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .its3d-header {
+    margin-bottom: 40px;
+  }
+  .its3d-wave-tl, .its3d-wave-br {
+    width: 200px;
+    height: 160px;
+  }
+  .its3d-dots-bl, .its3d-dots-tr {
+    display: none;
+  }
+}
+
+
+    /* ==========================================================================
+       PREMIUM 3D TECHNOLOGY PRODUCTS & SOLUTIONS (EXACT REFERENCE MATCH)
+       ========================================================================== */
+    .tp3d-section {
+      position: relative;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFD 100%);
+      padding: 95px 0 115px;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .tp3d-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Decorative Corner Ribbons */
+    .corner-ribbon {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .corner-top-right {
+      top: 0;
+      right: 0;
+      width: clamp(260px, 30vw, 440px);
+    }
+    .corner-bottom-left {
+      bottom: 0;
+      left: 0;
+      width: clamp(260px, 30vw, 440px);
+    }
+    .corner-ribbon svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Section Header */
+    .tp3d-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .tp3d-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 22px;
+      background: #FFFFFF;
+      border: 1.5px solid #126BFF;
+      box-shadow: 0 4px 14px rgba(18, 107, 255, 0.1);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: #0B63E5;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .tp3d-badge-icon {
+      color: #F59E0B;
+      display: flex;
+      align-items: center;
+    }
+    .tp3d-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .tp3d-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      color: #0B1B35;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .tp3d-title-solutions {
+      color: #126BFF;
+    }
+    .tp-spark-left, .tp-spark-right {
+      display: inline-flex;
+      color: #FFB800;
+    }
+    .tp3d-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      color: #64748B;
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+    .tp3d-dual-bar {
+      width: 70px;
+      height: 4px;
+      border-radius: 2px;
+      margin: 0 auto;
+      display: flex;
+      overflow: hidden;
+    }
+    .tp-bar-blue {
+      flex: 1;
+      background: #126BFF;
+    }
+    .tp-bar-yellow {
+      flex: 1;
+      background: #FFB800;
+    }
+
+    /* 8 Raised 3D Product Cards Grid (4 Columns x 2 Rows) */
+    .tp3d-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
+      margin-top: 36px;
+      margin-bottom: 40px;
+    }
+
+    .tp3d-card {
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 32px 20px 28px;
+      text-align: center;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1.5px solid #F1F5F9;
+    }
+    .tp3d-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 42px rgba(18, 107, 255, 0.14);
+    }
+
+    /* Curved Corner Wedges on Top-Left & Bottom-Right matching reference */
+    .tp3d-card::before,
+    .tp3d-card::after {
+      content: '';
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      pointer-events: none;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      z-index: 1;
+    }
+    .tp3d-card:hover::before {
+      transform: scale(1.15);
+    }
+    .tp3d-card:hover::after {
+      transform: scale(1.15);
+    }
+
+    /* Card Top-Left Wedge: Smooth curved shape matching reference */
+    .tp3d-card::before {
+      top: 0;
+      left: 0;
+      border-top-left-radius: 22px;
+      border-bottom-right-radius: 40px;
+    }
+    /* Card Bottom-Right Wedge: Smooth curved shape matching reference */
+    .tp3d-card::after {
+      bottom: 0;
+      right: 0;
+      border-bottom-right-radius: 22px;
+      border-top-left-radius: 40px;
+    }
+
+    /* 1. Computers (Cyan / Blue) */
+    .tp3d-c-blue { border-color: #BAE6FD; }
+    .tp3d-c-blue::before, .tp3d-c-blue::after { background: radial-gradient(circle, #0284C7 0%, #00BAF2 70%); }
+    .tp3d-badge-blue { background: #E0F2FE; color: #0284C7; }
+
+    /* 2. Laptops (Golden Yellow / Amber) */
+    .tp3d-c-yellow { border-color: #FDE68A; }
+    .tp3d-c-yellow::before, .tp3d-c-yellow::after { background: radial-gradient(circle, #F59E0B 0%, #FFB800 70%); }
+    .tp3d-badge-yellow { background: #FEF3C7; color: #D97706; }
+
+    /* 3. Desktops (Royal Purple / Violet) */
+    .tp3d-c-purple { border-color: #E9D5FF; }
+    .tp3d-c-purple::before, .tp3d-c-purple::after { background: radial-gradient(circle, #8B5CF6 0%, #6D28D9 70%); }
+    .tp3d-badge-purple { background: #F3E8FF; color: #7C3AED; }
+
+    /* 4. Servers (Emerald Green) */
+    .tp3d-c-green { border-color: #A7F3D0; }
+    .tp3d-c-green::before, .tp3d-c-green::after { background: radial-gradient(circle, #10B981 0%, #059669 70%); }
+    .tp3d-badge-green { background: #D1FAE5; color: #059669; }
+
+    /* 5. CCTV Systems (Vibrant Pink / Magenta) */
+    .tp3d-c-pink { border-color: #FBCFE8; }
+    .tp3d-c-pink::before, .tp3d-c-pink::after { background: radial-gradient(circle, #EC4899 0%, #DB2777 70%); }
+    .tp3d-badge-pink { background: #FCE7F3; color: #DB2777; }
+
+    /* 6. Workstations (Electric Blue) */
+    .tp3d-c-cyan { border-color: #BAE6FD; }
+    .tp3d-c-cyan::before, .tp3d-c-cyan::after { background: radial-gradient(circle, #0B63E5 0%, #0284C7 70%); }
+    .tp3d-badge-cyan { background: #E0F2FE; color: #0B63E5; }
+
+    /* 7. Switches (Tangerine Orange) */
+    .tp3d-c-orange { border-color: #FED7AA; }
+    .tp3d-c-orange::before, .tp3d-c-orange::after { background: radial-gradient(circle, #F97316 0%, #EA580C 70%); }
+    .tp3d-badge-orange { background: #FFEDD5; color: #EA580C; }
+
+    /* 8. Networking Equip (Deep Violet / Indigo) */
+    .tp3d-c-indigo { border-color: #DDD6FE; }
+    .tp3d-c-indigo::before, .tp3d-c-indigo::after { background: radial-gradient(circle, #6366F1 0%, #4F46E5 70%); }
+    .tp3d-badge-indigo { background: #EDE9FE; color: #4F46E5; }
+
+    /* Circular Icon Badge in Cards */
+    .tp3d-icon-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .tp3d-card:hover .tp3d-icon-circle {
+      transform: scale(1.1);
+    }
+    .tp3d-icon-circle svg {
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+
+    .tp3d-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0B1B35;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.01em;
+    }
+
+    /* Pill Badge Below the Cards */
+    .tp3d-resellers-badge-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 10px auto 48px;
+    }
+    .tp3d-resellers-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid #FFD000;
+      box-shadow: 0 6px 18px rgba(245, 158, 11, 0.12);
+      border-radius: 999px;
+      padding: 10px 28px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tp3d-resellers-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.18);
+    }
+    .tp3d-resellers-icon {
+      color: #0B63E5;
+      display: flex;
+      align-items: center;
+    }
+    .tp3d-resellers-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    .tp3d-resellers-divider {
+      width: 1.5px;
+      height: 20px;
+      background: #E2E8F0;
+    }
+    .tp3d-resellers-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0B63E5;
+    }
+
+    /* Promotional Poster Frame Below */
+    .tp3d-poster-wrap {
+      margin-top: 10px;
+      border-radius: 28px;
+      padding: 8px;
+      background: #FFFFFF;
+      box-shadow: 0 24px 60px rgba(18, 107, 255, 0.18), 0 0 0 1.5px #BFDBFE;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .tp3d-poster-wrap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 72px rgba(18, 107, 255, 0.24), 0 0 0 2px #60A5FA;
+    }
+    .tp3d-poster-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .tp3d-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+    @media (max-width: 576px) {
+      .tp3d-section {
+        padding: 60px 0 80px;
+      }
+      .tp3d-container {
+        padding: 0 16px;
+      }
+      .tp3d-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .tp3d-card {
+        padding: 24px 12px 20px;
+        border-radius: 18px;
+      }
+      .tp3d-icon-circle {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 12px;
+      }
+      .tp3d-icon-circle svg {
+        width: 26px;
+        height: 26px;
+      }
+      .tp3d-card-title {
+        font-size: 0.98rem;
+      }
+      .tp3d-resellers-badge {
+        padding: 8px 18px;
+        gap: 10px;
+      }
+      .tp3d-resellers-text {
+        font-size: 0.88rem;
+      }
+    }
+
+  
+    .services-intro-desc {
+      font-family: 'Inter', sans-serif;
+      color: #475569;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1.8rem;
+      max-width: 540px;
+      text-align: justify;
+      text-justify: inter-word;
+      text-align-last: left;
+    }
+
+    @media (max-width: 768px) {
+      .services-intro-desc {
+        text-align: left;
+        max-width: 100%;
+      }
+    }
   </style>
 
 </head>
@@ -184,7 +1048,7 @@
 
     </a>
 
-    <a href="https://wa.me/919952065544" target="_blank">
+    <a href="https://wa.me/919952065544" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 
@@ -192,7 +1056,7 @@
 
     </a>
 
-    <a href="https://www.instagram.com/aaracomputers" target="_blank">
+    <a href="https://www.instagram.com/aaracomputers" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
 
@@ -309,274 +1173,858 @@
 
 
 
-  <!-- Page Hero Premium -->
-
-  <header class="page-hero-premium" style="background-image: url('assets/images/services-hero.png');">
-
-    <div class="page-hero-overlay"></div>
-
-    <div class="page-hero-particles"></div>
-
-    <div class="container reveal">
-
-      <h1>IT Services</h1>
-
-      <div style="margin-top:1rem;">
-
-        <span class="breadcrumb-premium"><a href="index.html">Home</a> <span>/</span> IT Services</span>
-
-      </div>
-
-      <p style="color:rgba(255,255,255,0.75);margin-top:1rem;font-size:1.1rem;">Professional Technology Solutions for Every Need</p>
-
-    </div>
-
-  </header>
+  
 
 
 
   <!-- Services Intro -->
 
-  <section class="services-intro">
-
-    <div class="container">
-
-      <div class="services-intro-grid">
-
-        <div class="reveal-left">
-
-          <h2 class="section-title">Reliable Technology Solutions Since 2012</h2>
-
-          <p style="color: #6B7280; line-height: 1.8; margin-bottom: 1.5rem;">AARA Computers provides comprehensive IT services designed to support businesses and individuals. From setting up secure networks to digital marketing strategies, we deliver solutions that are efficient, scalable, and affordable.</p>
-
-          <div class="credential-bar" style="margin-top: 2rem; padding: 1rem; border-radius: 12px;">
-
-             <div class="cred-badges-row">
-
-                 <span class="cert-badge">
-
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-
-                  Led by Microsoft Certified Professional (MCP)
-
-                 </span>
-
-                 <span class="cert-badge">
-
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-
-                  Microsoft Certified Systems Engineer (MCSE)
-
-                 </span>
-
-             </div>
-
-          </div>
-
-        </div>
-
-        <div class="reveal-right" style="display: flex; justify-content: center;">
-
-          <img loading="lazy" decoding="async" src="assets/images/logo/company-logo.png" alt="AARA Computers Logo" style="max-width: 300px;" />
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+  
 
 
 
   <!-- IT Services Grid -->
 
-  <section class="section section-gray">
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       PROFESSIONAL IT SERVICES - 3D MODERN WHITE THEME SECTION
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="its3d-section" id="it-services" aria-label="Professional IT Services">
+    <!-- Ambient Light Accent -->
+    <div class="its3d-bg-accent"></div>
 
-    <div class="container">
+    <!-- Top-Left Flowing Cyan-Blue & Yellow Waves -->
+    <svg class="its3d-wave-tl" viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="wave-tl-blue" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0866F5"/>
+          <stop offset="60%" stop-color="#19B9EE"/>
+          <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.1"/>
+        </linearGradient>
+        <linearGradient id="wave-tl-yellow" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FFC928"/>
+          <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+        </linearGradient>
+      </defs>
+      <path d="M-20,0 C60,40 140,110 180,180 C200,215 220,240 260,260 L-20,260 Z" fill="url(#wave-tl-blue)" opacity="0.9"/>
+      <path d="M-20,130 C40,150 110,190 140,260 L-20,260 Z" fill="url(#wave-tl-yellow)" opacity="0.85"/>
+    </svg>
 
-      <div class="section-header center reveal">
+    <!-- Bottom-Right Flowing Cyan-Blue & Yellow Waves -->
+    <svg class="its3d-wave-br" viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="wave-br-blue" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#0866F5"/>
+          <stop offset="60%" stop-color="#19B9EE"/>
+          <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.1"/>
+        </linearGradient>
+        <linearGradient id="wave-br-yellow" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#FFC928"/>
+          <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1"/>
+        </linearGradient>
+      </defs>
+      <path d="M360,280 C260,240 180,170 140,100 C120,65 100,40 60,20 L360,20 Z" fill="url(#wave-br-blue)" opacity="0.9"/>
+      <path d="M360,150 C300,130 230,90 200,20 L360,20 Z" fill="url(#wave-br-yellow)" opacity="0.85"/>
+    </svg>
 
-        <span class="section-label">Our Expertise</span>
+    <!-- Corner Dot Patterns -->
+    <svg class="its3d-dots-bl" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="its3d-dot-pattern-bl" x="0" y="0" width="20" height="18" patternUnits="userSpaceOnUse">
+          <circle cx="4" cy="4" r="2.2" fill="#0866F5" opacity="0.25"/>
+        </pattern>
+      </defs>
+      <rect width="120" height="90" fill="url(#its3d-dot-pattern-bl)"/>
+    </svg>
 
-        <h2 class="section-title">Professional IT Services</h2>
+    <svg class="its3d-dots-tr" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="its3d-dot-pattern-tr" x="0" y="0" width="20" height="18" patternUnits="userSpaceOnUse">
+          <circle cx="4" cy="4" r="2.2" fill="#0866F5" opacity="0.2"/>
+        </pattern>
+      </defs>
+      <rect width="120" height="90" fill="url(#its3d-dot-pattern-tr)"/>
+    </svg>
+
+    <div class="its3d-container">
+      <!-- Section Header -->
+      <div class="its3d-header">
+        <div class="its3d-badge-wrapper">
+          <div class="its3d-badge-line-left"></div>
+          <div class="its3d-badge">
+            <span class="its3d-badge-icon">💻</span>
+            <span>IT SERVICES</span>
+          </div>
+          <div class="its3d-badge-line-right"></div>
+        </div>
+
+        <div class="its3d-title-wrapper">
+          <h2 class="its3d-title">
+            Professional <span class="its3d-title-gradient">IT Services
+              <!-- 3 Golden Yellow Energy Sparks Above Services -->
+              <svg class="its3d-sparks" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="8" y1="18" x2="2" y2="6" stroke="#FFC928" stroke-width="3" stroke-linecap="round"/>
+                <line x1="16" y1="18" x2="16" y2="2" stroke="#FFC928" stroke-width="3" stroke-linecap="round"/>
+                <line x1="24" y1="18" x2="30" y2="6" stroke="#FFC928" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </h2>
+        </div>
+
+        <p class="its3d-subtitle">From CCTV installation to web development — complete IT solutions for your business.</p>
+      </div>
+
+      <!-- Service Cards Grid (3 Columns x 2 Rows) -->
+      <div class="its3d-grid">
+
+        <!-- Card 1: Digital Marketing -->
+        <div class="its3d-card its3d-card-blue" onclick="location.href='services.html#digital-marketing'">
+          
+    <svg class="its3d-corner-accent" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="accent-grad-1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0866F5"/>
+          <stop offset="100%" stop-color="#19B9EE"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,24 C0,10.745 10.745,0 24,0 H48 C28,2 14,16 12,36 V52 C4,48 0,38 0,24 Z" fill="url(#accent-grad-1)" />
+    </svg>
+  
+          <div class="its3d-stage">
+            <div class="its3d-stage-glow"></div>
+            <div class="its3d-art">
+<svg viewBox="0 0 260 170" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dm-screen-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E234B"/>
+      <stop offset="100%" stop-color="#143C78"/>
+    </linearGradient>
+    <linearGradient id="dm-base-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="dm-speaker-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#6B21A8"/>
+    </linearGradient>
+    <linearGradient id="dm-chart-blue" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0866F5"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="dm-chart-yellow" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FDE047"/>
+    </linearGradient>
+    <filter id="dm-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0866F5" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <ellipse cx="145" cy="148" rx="75" ry="10" fill="#E2E8F0" opacity="0.8"/>
+  <rect x="90" y="32" width="115" height="78" rx="8" fill="#1E293B" filter="url(#dm-glow)"/>
+  <circle cx="147.5" cy="36.5" r="1.5" fill="#64748B"/>
+  <rect x="94" y="41" width="107" height="65" rx="4" fill="url(#dm-screen-grad)"/>
+  <line x1="102" y1="58" x2="193" y2="58" stroke="#1E3A6B" stroke-dasharray="2 2" stroke-width="1"/>
+  <line x1="102" y1="74" x2="193" y2="74" stroke="#1E3A6B" stroke-dasharray="2 2" stroke-width="1"/>
+  <line x1="102" y1="90" x2="193" y2="90" stroke="#1E3A6B" stroke-width="1"/>
+  <rect x="108" y="72" width="10" height="18" rx="2" fill="url(#dm-chart-blue)"/>
+  <rect x="124" y="60" width="10" height="30" rx="2" fill="url(#dm-chart-yellow)"/>
+  <rect x="140" y="52" width="10" height="38" rx="2" fill="url(#dm-chart-blue)"/>
+  <rect x="156" y="66" width="10" height="24" rx="2" fill="url(#dm-chart-yellow)"/>
+  <rect x="172" y="46" width="10" height="44" rx="2" fill="url(#dm-chart-blue)"/>
+  <path d="M106 82 L122 70 L138 64 L154 74 L170 54 L186 48" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="186" cy="48" r="3" fill="#FDE047" stroke="#0E234B" stroke-width="1.5"/>
+  <path d="M72 110 L223 110 L213 140 L82 140 Z" fill="url(#dm-base-grad)"/>
+  <path d="M72 110 L82 140 L213 140 L223 110" stroke="#94A3B8" stroke-width="1"/>
+  <rect x="130" y="118" width="35" height="16" rx="2" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1"/>
+  <g transform="translate(18, 52)">
+    <path d="M68 28 A16 16 0 0 1 76 42" stroke="#A855F7" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M74 20 A26 26 0 0 1 84 46" stroke="#C084FC" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M24 38 L54 18 L54 62 L24 46 Z" fill="url(#dm-speaker-grad)"/>
+    <ellipse cx="54" cy="40" rx="6" ry="22" fill="#E9D5FF"/>
+    <ellipse cx="54" cy="40" rx="3.5" ry="16" fill="#6B21A8"/>
+    <path d="M12 36 L24 38 L24 46 L12 48 A6 6 0 0 1 12 36 Z" fill="#7E22CE"/>
+    <path d="M22 46 L20 66 A4 4 0 0 0 28 66 L28 46 Z" fill="#F59E0B"/>
+  </g>
+  <g transform="translate(68, 16)">
+    <circle cx="16" cy="16" r="14" fill="#FFFFFF" filter="url(#dm-glow)"/>
+    <path d="M22 16.5 C22 13 19.5 10 16 10 C12.7 10 10 12.7 10 16 C10 19.3 12.7 22 16 22 C19.2 22 21.6 19.8 21.9 17 L16 17 L16 15 L21.9 15 C22 15.5 22 16 22 16.5 Z" fill="#EA4335"/>
+    <path d="M16 12 C17.5 12 18.7 12.5 19.5 13.3 L21 11.8 C19.7 10.6 18 10 16 10 C13.3 10 11.1 11.6 10 14 L12.5 15.9 C13.1 13.6 14.4 12 16 12 Z" fill="#4285F4"/>
+  </g>
+  <g transform="translate(195, 18)">
+    <circle cx="14" cy="14" r="14" fill="#1877F2" filter="url(#dm-glow)"/>
+    <path d="M15.5 10.5 H13.5 C12.4 10.5 11.5 11.4 11.5 12.5 V14 H10 V16.5 H11.5 V22 H14 V16.5 H16 L16.5 14 H14 V12.5 C14 12.2 14.2 12 14.5 12 H15.5 V10.5 Z" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(208, 62)">
+    <rect x="0" y="0" width="26" height="26" rx="7" fill="url(#dm-speaker-grad)" filter="url(#dm-glow)"/>
+    <rect x="4.5" y="4.5" width="17" height="17" rx="5" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
+    <circle cx="13" cy="13" r="4.2" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
+    <circle cx="17.8" cy="8.2" r="1.2" fill="#FFFFFF"/>
+  </g>
+  <polygon points="120,24 122,29 127,31 122,33 120,38 118,33 113,31 118,29" fill="#FFC928"/>
+</svg>
+</div>
+          </div>
+          <div class="its3d-content">
+            <div class="its3d-title-row">
+              <div class="its3d-bar"></div>
+              <h3 class="its3d-card-title">Digital Marketing</h3>
+            </div>
+            <div class="its3d-desc-row">
+              <p class="its3d-card-desc">SEO, Social Media, Google Ads, content strategy for your business growth.</p>
+              <a href="services.html#digital-marketing" class="its3d-arrow-btn" aria-label="Learn more about Digital Marketing">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Web Development -->
+        <div class="its3d-card its3d-card-yellow" onclick="location.href='services.html#web-development'">
+          
+    <svg class="its3d-corner-accent" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="accent-grad-2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#F59E0B"/>
+          <stop offset="100%" stop-color="#FFC928"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,24 C0,10.745 10.745,0 24,0 H48 C28,2 14,16 12,36 V52 C4,48 0,38 0,24 Z" fill="url(#accent-grad-2)" />
+    </svg>
+  
+          <div class="its3d-stage">
+            <div class="its3d-stage-glow"></div>
+            <div class="its3d-art">
+<svg viewBox="0 0 260 170" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wd-screen-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="wd-base-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="wd-gear-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="wd-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#F59E0B" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <ellipse cx="120" cy="150" rx="75" ry="9" fill="#E2E8F0" opacity="0.8"/>
+  <g transform="translate(142, 14)" filter="url(#wd-glow)">
+    <rect x="0" y="0" width="94" height="68" rx="8" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="1.5"/>
+    <path d="M0 0 H94 V18 H0 Z" fill="#8B5CF6"/>
+    <circle cx="8" cy="9" r="2.5" fill="#EF4444"/>
+    <circle cx="16" cy="9" r="2.5" fill="#FBBF24"/>
+    <circle cx="24" cy="9" r="2.5" fill="#10B981"/>
+    <rect x="10" y="26" width="45" height="6" rx="2" fill="#E0E7FF"/>
+    <rect x="10" y="36" width="30" height="4" rx="2" fill="#F1F5F9"/>
+    <rect x="10" y="44" width="35" height="4" rx="2" fill="#F1F5F9"/>
+    <rect x="58" y="26" width="26" height="24" rx="4" fill="#C7D2FE"/>
+  </g>
+  <rect x="62" y="36" width="118" height="78" rx="8" fill="#0F172A" filter="url(#wd-glow)"/>
+  <circle cx="121" cy="40.5" r="1.5" fill="#64748B"/>
+  <rect x="66" y="45" width="110" height="65" rx="4" fill="url(#wd-screen-grad)"/>
+  <g transform="translate(82, 54)">
+    <text x="38" y="38" font-family="monospace, Poppins, sans-serif" font-weight="900" font-size="34" fill="#00D4FF" text-anchor="middle" letter-spacing="-1">&lt;/&gt;</text>
+    <rect x="6" y="48" width="22" height="3" rx="1.5" fill="#38BDF8" opacity="0.6"/>
+    <rect x="32" y="48" width="42" height="3" rx="1.5" fill="#F59E0B" opacity="0.6"/>
+  </g>
+  <path d="M42 114 L200 114 L188 142 L54 142 Z" fill="url(#wd-base-grad)"/>
+  <path d="M42 114 L54 142 L188 142 L200 114" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="102" y="122" width="38" height="15" rx="2" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <g transform="translate(195, 78)" filter="url(#wd-glow)">
+    <circle cx="20" cy="20" r="13" fill="url(#wd-gear-grad)"/>
+    <rect x="17" y="2" width="6" height="8" rx="2" fill="#D97706"/>
+    <rect x="17" y="30" width="6" height="8" rx="2" fill="#D97706"/>
+    <rect x="2" y="17" width="8" height="6" rx="2" fill="#D97706"/>
+    <rect x="30" y="17" width="8" height="6" rx="2" fill="#D97706"/>
+    <rect x="7" y="7" width="6" height="7" rx="2" transform="rotate(45 10 10)" fill="#D97706"/>
+    <rect x="27" y="27" width="6" height="7" rx="2" transform="rotate(45 30 30)" fill="#D97706"/>
+    <rect x="27" y="7" width="6" height="7" rx="2" transform="rotate(-45 30 10)" fill="#D97706"/>
+    <rect x="7" y="27" width="6" height="7" rx="2" transform="rotate(-45 10 30)" fill="#D97706"/>
+    <circle cx="20" cy="20" r="6" fill="#FFFFFF"/>
+  </g>
+  <polygon points="48,28 50,33 55,35 50,37 48,42 46,37 41,35 46,33" fill="#FBBF24"/>
+</svg>
+</div>
+          </div>
+          <div class="its3d-content">
+            <div class="its3d-title-row">
+              <div class="its3d-bar"></div>
+              <h3 class="its3d-card-title">Web Development</h3>
+            </div>
+            <div class="its3d-desc-row">
+              <p class="its3d-card-desc">Custom websites, landing pages, e-commerce and responsive design.</p>
+              <a href="services.html#web-development" class="its3d-arrow-btn" aria-label="Learn more about Web Development">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Laptop & Desktop Service -->
+        <div class="its3d-card its3d-card-purple" onclick="location.href='services.html#hardware-service'">
+          
+    <svg class="its3d-corner-accent" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="accent-grad-3" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#8B5CF6"/>
+          <stop offset="100%" stop-color="#A855F7"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,24 C0,10.745 10.745,0 24,0 H48 C28,2 14,16 12,36 V52 C4,48 0,38 0,24 Z" fill="url(#accent-grad-3)" />
+    </svg>
+  
+          <div class="its3d-stage">
+            <div class="its3d-stage-glow"></div>
+            <div class="its3d-art">
+<svg viewBox="0 0 260 170" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lds-screen-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="lds-tower-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="lds-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#8B5CF6" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="148" rx="60" ry="8" fill="#E2E8F0" opacity="0.8"/>
+  <ellipse cx="195" cy="148" rx="30" ry="7" fill="#E2E8F0" opacity="0.8"/>
+  <path d="M96 128 L114 128 L112 110 L98 110 Z" fill="#94A3B8"/>
+  <ellipse cx="105" cy="132" rx="26" ry="6" fill="#64748B"/>
+  <ellipse cx="105" cy="131" rx="24" ry="4.5" fill="#CBD5E1"/>
+  <rect x="42" y="28" width="126" height="84" rx="8" fill="#0F172A" filter="url(#lds-glow)"/>
+  <rect x="46" y="32" width="118" height="72" rx="5" fill="url(#lds-screen-grad)"/>
+  <g transform="translate(105, 68)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="22" fill="#38BDF8" opacity="0.25"/>
+    <line x1="-16" y1="16" x2="16" y2="-16" stroke-width="4.5"/>
+    <line x1="-16" y1="16" x2="-8" y2="8" stroke="#FBBF24" stroke-width="6.5"/>
+    <line x1="14" y1="-14" x2="18" y2="-18" stroke="#E2E8F0" stroke-width="3"/>
+    <line x1="-16" y1="-16" x2="16" y2="16" stroke="#FFFFFF" stroke-width="4.5"/>
+    <path d="M-19 -13 C-24 -15 -24 -21 -19 -24 C-14 -27 -9 -24 -8 -20 L-13 -17 Z" fill="#FFFFFF" stroke="none"/>
+    <path d="M19 13 C24 15 24 21 19 24 C14 27 9 24 8 20 L13 17 Z" fill="#FFFFFF" stroke="none"/>
+  </g>
+  <g transform="translate(174, 30)" filter="url(#lds-glow)">
+    <rect x="0" y="0" width="46" height="114" rx="6" fill="url(#lds-tower-grad)"/>
+    <circle cx="23" cy="14" r="5" fill="#0284C7"/>
+    <circle cx="23" cy="14" r="2" fill="#38BDF8"/>
+    <rect x="8" y="26" width="30" height="4" rx="1.5" fill="#475569"/>
+    <rect x="12" y="38" width="6" height="3" rx="1" fill="#64748B"/>
+    <rect x="22" y="38" width="6" height="3" rx="1" fill="#64748B"/>
+    <line x1="10" y1="56" x2="36" y2="56" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="10" y1="64" x2="36" y2="64" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="10" y1="72" x2="36" y2="72" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="10" y1="80" x2="36" y2="80" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="10" y1="88" x2="36" y2="88" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="10" y1="96" x2="36" y2="96" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <polygon points="32,24 34,29 39,31 34,33 32,38 30,33 25,31 30,29" fill="#A855F7"/>
+</svg>
+</div>
+          </div>
+          <div class="its3d-content">
+            <div class="its3d-title-row">
+              <div class="its3d-bar"></div>
+              <h3 class="its3d-card-title">Laptop &amp; Desktop Service</h3>
+            </div>
+            <div class="its3d-desc-row">
+              <p class="its3d-card-desc">Sales, repair, upgrades, OS installation and data recovery services.</p>
+              <a href="services.html#hardware-service" class="its3d-arrow-btn" aria-label="Learn more about Laptop and Desktop Service">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Networking Solutions -->
+        <div class="its3d-card its3d-card-green" onclick="location.href='services.html#networking'">
+          
+    <svg class="its3d-corner-accent" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="accent-grad-4" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#12B76A"/>
+          <stop offset="100%" stop-color="#34D399"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,24 C0,10.745 10.745,0 24,0 H48 C28,2 14,16 12,36 V52 C4,48 0,38 0,24 Z" fill="url(#accent-grad-4)" />
+    </svg>
+  
+          <div class="its3d-stage">
+            <div class="its3d-stage-glow"></div>
+            <div class="its3d-art">
+<svg viewBox="0 0 260 170" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="net-body-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="net-face-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <filter id="net-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#12B76A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <ellipse cx="130" cy="148" rx="85" ry="10" fill="#E2E8F0" opacity="0.8"/>
+  <g transform="translate(130, 68)" stroke-linecap="round">
+    <path d="M-45 -25 A60 60 0 0 1 45 -25" stroke="#38BDF8" stroke-width="4.5" fill="none" opacity="0.85"/>
+    <path d="M-30 -12 A40 40 0 0 1 30 -12" stroke="#0866F5" stroke-width="4.5" fill="none"/>
+    <path d="M-15 0 A20 20 0 0 1 15 0" stroke="#00D4FF" stroke-width="4.5" fill="none"/>
+    <circle cx="0" cy="12" r="3.5" fill="#00D4FF"/>
+  </g>
+  <path d="M68 114 L58 48 L64 48 L74 114 Z" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <circle cx="61" cy="48" r="3.5" fill="#0F172A"/>
+  <path d="M192 114 L202 48 L196 48 L186 114 Z" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <circle cx="199" cy="48" r="3.5" fill="#0F172A"/>
+  <g filter="url(#net-glow)">
+    <path d="M50 114 L75 92 L185 92 L210 114 Z" fill="url(#net-body-grad)"/>
+    <line x1="80" y1="96" x2="180" y2="96" stroke="#475569" stroke-width="1"/>
+    <rect x="50" y="114" width="160" height="28" rx="6" fill="url(#net-face-grad)"/>
+    <g transform="translate(90, 126)">
+      <circle cx="0" cy="0" r="3.5" fill="#10B981"/>
+      <circle cx="0" cy="0" r="1.5" fill="#D1FAE5"/>
+      <circle cx="18" cy="0" r="3.5" fill="#10B981"/>
+      <circle cx="18" cy="0" r="1.5" fill="#D1FAE5"/>
+      <circle cx="36" cy="0" r="3.5" fill="#10B981"/>
+      <circle cx="36" cy="0" r="1.5" fill="#D1FAE5"/>
+      <circle cx="54" cy="0" r="3.5" fill="#10B981"/>
+      <circle cx="54" cy="0" r="1.5" fill="#D1FAE5"/>
+      <circle cx="72" cy="0" r="3.5" fill="#10B981"/>
+      <circle cx="72" cy="0" r="1.5" fill="#D1FAE5"/>
+    </g>
+  </g>
+  <polygon points="45,35 47,40 52,42 47,44 45,49 43,44 38,42 43,40" fill="#10B981"/>
+</svg>
+</div>
+          </div>
+          <div class="its3d-content">
+            <div class="its3d-title-row">
+              <div class="its3d-bar"></div>
+              <h3 class="its3d-card-title">Networking Solutions</h3>
+            </div>
+            <div class="its3d-desc-row">
+              <p class="its3d-card-desc">LAN/WAN setup, structured cabling, WiFi solutions and troubleshooting.</p>
+              <a href="services.html#networking" class="its3d-arrow-btn" aria-label="Learn more about Networking Solutions">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: CCTV Installation -->
+        <div class="its3d-card its3d-card-cyan" onclick="location.href='services.html#cctv'">
+          
+    <svg class="its3d-corner-accent" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="accent-grad-5" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0284C7"/>
+          <stop offset="100%" stop-color="#38BDF8"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,24 C0,10.745 10.745,0 24,0 H48 C28,2 14,16 12,36 V52 C4,48 0,38 0,24 Z" fill="url(#accent-grad-5)" />
+    </svg>
+  
+          <div class="its3d-stage">
+            <div class="its3d-stage-glow"></div>
+            <div class="its3d-art">
+<svg viewBox="0 0 260 170" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cctv-cam-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="cctv-lens-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#082F49"/>
+    </linearGradient>
+    <linearGradient id="cctv-screen-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B192C"/>
+      <stop offset="100%" stop-color="#1E3E62"/>
+    </linearGradient>
+    <filter id="cctv-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284C7" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <ellipse cx="140" cy="150" rx="80" ry="10" fill="#E2E8F0" opacity="0.8"/>
+  <g transform="translate(142, 34)" filter="url(#cctv-glow)">
+    <rect x="0" y="0" width="86" height="58" rx="6" fill="#0F172A"/>
+    <rect x="3" y="3" width="80" height="52" rx="4" fill="url(#cctv-screen-grad)"/>
+    <line x1="43" y1="3" x2="43" y2="55" stroke="#38BDF8" stroke-width="1.2" opacity="0.6"/>
+    <line x1="3" y1="29" x2="83" y2="29" stroke="#38BDF8" stroke-width="1.2" opacity="0.6"/>
+    <circle cx="23" cy="16" r="4" fill="#38BDF8" opacity="0.4"/>
+    <circle cx="63" cy="16" r="4" fill="#38BDF8" opacity="0.4"/>
+    <circle cx="23" cy="42" r="4" fill="#38BDF8" opacity="0.4"/>
+    <circle cx="63" cy="42" r="4" fill="#38BDF8" opacity="0.4"/>
+    <circle cx="78" cy="8" r="2" fill="#EF4444"/>
+    <path d="M38 58 L48 58 L46 72 L40 72 Z" fill="#64748B"/>
+    <ellipse cx="43" cy="73" rx="14" ry="4" fill="#475569"/>
+  </g>
+  <g transform="translate(100, 118)">
+    <rect x="0" y="0" width="94" height="26" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <circle cx="12" cy="13" r="2" fill="#10B981"/>
+    <circle cx="20" cy="13" r="2" fill="#0284C7"/>
+    <circle cx="28" cy="13" r="2" fill="#EF4444"/>
+    <line x1="50" y1="9" x2="84" y2="9" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="50" y1="13" x2="84" y2="13" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="50" y1="17" x2="84" y2="17" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(38, 48)" filter="url(#cctv-glow)">
+    <path d="M72 65 L66 84 L78 84 L82 65 Z" fill="#94A3B8"/>
+    <ellipse cx="72" cy="84" rx="12" ry="4" fill="#64748B"/>
+    <path d="M42 22 L86 42 L72 68 L28 48 Z" fill="url(#cctv-cam-grad)"/>
+    <path d="M36 18 L92 42 L88 48 L32 24 Z" fill="#E2E8F0"/>
+    <ellipse cx="32" cy="48" rx="12" ry="16" transform="rotate(-15 32 48)" fill="#0F172A"/>
+    <ellipse cx="32" cy="48" rx="8" ry="11" transform="rotate(-15 32 48)" fill="url(#cctv-lens-grad)"/>
+    <ellipse cx="30" cy="45" rx="3" ry="5" transform="rotate(-15 30 45)" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="40" cy="38" r="2" fill="#EF4444"/>
+  </g>
+  <polygon points="34,22 36,27 41,29 36,31 34,36 32,31 27,29 32,27" fill="#0284C7"/>
+</svg>
+</div>
+          </div>
+          <div class="its3d-content">
+            <div class="its3d-title-row">
+              <div class="its3d-bar"></div>
+              <h3 class="its3d-card-title">CCTV Installation</h3>
+            </div>
+            <div class="its3d-desc-row">
+              <p class="its3d-card-desc">IP cameras, DVR/NVR systems, surveillance design and maintenance.</p>
+              <a href="services.html#cctv" class="its3d-arrow-btn" aria-label="Learn more about CCTV Installation">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: AMC Services -->
+        <div class="its3d-card its3d-card-pink" onclick="location.href='services.html#amc'">
+          
+    <svg class="its3d-corner-accent" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="accent-grad-6" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#EC4899"/>
+          <stop offset="100%" stop-color="#F472B6"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,24 C0,10.745 10.745,0 24,0 H48 C28,2 14,16 12,36 V52 C4,48 0,38 0,24 Z" fill="url(#accent-grad-6)" />
+    </svg>
+  
+          <div class="its3d-stage">
+            <div class="its3d-stage-glow"></div>
+            <div class="its3d-art">
+<svg viewBox="0 0 260 170" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="amc-blade-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="amc-shield-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <filter id="amc-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#EC4899" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="150" rx="65" ry="9" fill="#E2E8F0" opacity="0.8"/>
+  <ellipse cx="190" cy="148" rx="30" ry="7" fill="#E2E8F0" opacity="0.8"/>
+  <g transform="translate(62, 38)" filter="url(#amc-glow)">
+    <rect x="0" y="0" width="102" height="24" rx="4" fill="url(#amc-blade-grad)" stroke="#475569" stroke-width="1"/>
+    <circle cx="10" cy="12" r="2.5" fill="#38BDF8"/>
+    <circle cx="18" cy="12" r="2.5" fill="#10B981"/>
+    <line x1="30" y1="12" x2="78" y2="12" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+    <rect x="86" y="8" width="8" height="8" rx="2" fill="#475569"/>
+    <rect x="0" y="30" width="102" height="24" rx="4" fill="url(#amc-blade-grad)" stroke="#475569" stroke-width="1"/>
+    <circle cx="10" cy="42" r="2.5" fill="#38BDF8"/>
+    <circle cx="18" cy="42" r="2.5" fill="#10B981"/>
+    <line x1="30" y1="42" x2="78" y2="42" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+    <rect x="86" y="38" width="8" height="8" rx="2" fill="#475569"/>
+    <rect x="0" y="60" width="102" height="24" rx="4" fill="url(#amc-blade-grad)" stroke="#475569" stroke-width="1"/>
+    <circle cx="10" cy="72" r="2.5" fill="#38BDF8"/>
+    <circle cx="18" cy="72" r="2.5" fill="#10B981"/>
+    <line x1="30" y1="72" x2="78" y2="72" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+    <rect x="86" y="68" width="8" height="8" rx="2" fill="#475569"/>
+  </g>
+  <g transform="translate(162, 54)" filter="url(#amc-glow)">
+    <path d="M30 6 L56 16 C56 46 30 64 30 64 C30 64 4 46 4 16 Z" fill="url(#amc-shield-grad)" stroke="#BAE6FD" stroke-width="2.5"/>
+    <g transform="translate(20, 24)">
+      <path d="M5 10 V6 A5 5 0 0 1 15 6 V10" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <rect x="1" y="10" width="18" height="14" rx="3" fill="#FFFFFF"/>
+      <circle cx="10" cy="16" r="1.8" fill="#0284C7"/>
+      <path d="M9.2 16 L10.8 16 L11.2 20 L8.8 20 Z" fill="#0284C7"/>
+    </g>
+  </g>
+  <polygon points="52,24 54,29 59,31 54,33 52,38 50,33 45,31 50,29" fill="#EC4899"/>
+</svg>
+</div>
+          </div>
+          <div class="its3d-content">
+            <div class="its3d-title-row">
+              <div class="its3d-bar"></div>
+              <h3 class="its3d-card-title">AMC Services</h3>
+            </div>
+            <div class="its3d-desc-row">
+              <p class="its3d-card-desc">Annual Maintenance Contracts for computers, servers, networks and CCTV.</p>
+              <a href="services.html#amc" class="its3d-arrow-btn" aria-label="Learn more about AMC Services">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"></line>
+  <polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</a>
+            </div>
+          </div>
+        </div>
 
       </div>
 
-      <div class="grid-3">
-
-        <!-- Service 1 -->
-
-        <div class="service-card reveal" data-delay="0">
-
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-
-          <h3>Digital Marketing</h3>
-
-          <p>SEO, Social Media Marketing, Google Ads, Content Strategy, Brand Building for businesses of all sizes.</p>
-
-        </div>
-
-        <!-- Service 2 -->
-
-        <div class="service-card reveal" data-delay="100">
-
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-
-          <h3>Web Development</h3>
-
-          <p>Custom websites, landing pages, e-commerce, responsive design, modern UI/UX.</p>
-
-        </div>
-
-        <!-- Service 3 -->
-
-        <div class="service-card reveal" data-delay="200">
-
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-
-          <h3>Laptop & Desktop Service</h3>
-
-          <p>Sales of new/refurbished computers, repair, upgrade, OS installation, data recovery.</p>
-
-        </div>
-
-        <!-- Service 4 -->
-
-        <div class="service-card reveal" data-delay="0">
-
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-
-          <h3>Networking Solutions</h3>
-
-          <p>LAN/WAN setup, structured cabling, WiFi solutions, network troubleshooting.</p>
-
-        </div>
-
-        <!-- Service 5 -->
-
-        <div class="service-card reveal" data-delay="100">
-
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-
-          <h3>CCTV Installation</h3>
-
-          <p>IP camera, DVR/NVR systems, surveillance design, maintenance for homes and businesses.</p>
-
-        </div>
-
-        <!-- Service 6 -->
-
-        <div class="service-card reveal" data-delay="200">
-
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-
-          <h3>AMC Services</h3>
-
-          <p>Annual Maintenance Contracts for computers, servers, networks, CCTV systems.</p>
-
-        </div>
-
+      <!-- Bottom Centered Action Button -->
+      <div class="its3d-cta-wrap">
+        <a href="https://wa.me/919952065544" class="its3d-cta-btn">
+          <span class="its3d-btn-icon">💬</span>
+          <span>Enquire for IT Services</span>
+          <span class="its3d-btn-arrow">→</span>
+        </a>
       </div>
-
     </div>
-
   </section>
 
 
 
-  <!-- Technology Products -->
+  <!-- Redesigned Technology Products & Solutions Section (Reference Match) -->
+  <section class="tp3d-section" id="products">
+    <!-- Top-Right Ribbon Wave -->
+    <div class="corner-ribbon corner-top-right">
+      <svg viewBox="0 0 350 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0H350V200C300 120 220 70 120 40L0 0Z" fill="url(#tp-ribbon-yellow-tr)" opacity="0.95"/>
+        <path d="M50 0H350V140C280 80 190 40 80 15L50 0Z" fill="url(#tp-ribbon-blue-tr)"/>
+        <defs>
+          <linearGradient id="tp-ribbon-yellow-tr" x1="0" y1="0" x2="350" y2="200" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFD000"/>
+            <stop offset="1" stop-color="#FF9E00"/>
+          </linearGradient>
+          <linearGradient id="tp-ribbon-blue-tr" x1="50" y1="0" x2="350" y2="140" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0284C7"/>
+            <stop offset="1" stop-color="#0B63E5"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
 
-  <section class="products-section">
+    <!-- Bottom-Left Ribbon Wave -->
+    <div class="corner-ribbon corner-bottom-left">
+      <svg viewBox="0 0 350 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 200V0C50 80 130 130 230 160L350 200H0Z" fill="url(#tp-ribbon-yellow-bl)" opacity="0.95"/>
+        <path d="M0 200V60C70 120 160 160 270 185L300 200H0Z" fill="url(#tp-ribbon-blue-bl)"/>
+        <defs>
+          <linearGradient id="tp-ribbon-yellow-bl" x1="0" y1="200" x2="350" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFD000"/>
+            <stop offset="1" stop-color="#FF9E00"/>
+          </linearGradient>
+          <linearGradient id="tp-ribbon-blue-bl" x1="0" y1="200" x2="300" y2="60" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0284C7"/>
+            <stop offset="1" stop-color="#0B63E5"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
 
-    <div class="container">
+    <div class="tp3d-container">
+      <!-- Section Header -->
+      <div class="tp3d-header">
+        <div>
+          <span class="tp3d-badge">
+            <span class="tp3d-badge-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/>
+              </svg>
+            </span>
+            OUR PRODUCTS
+          </span>
+        </div>
 
-      <div class="section-header center reveal">
+        <div class="tp3d-title-row">
+          <span class="tp-spark-left">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFBF00" stroke-width="3" stroke-linecap="round">
+              <line x1="5" y1="12" x2="1" y2="12"/>
+              <line x1="7.76" y1="7.76" x2="4.93" y2="4.93"/>
+              <line x1="12" y1="5" x2="12" y2="1"/>
+            </svg>
+          </span>
+          <h2 class="tp3d-title">Technology Products <span class="tp3d-title-solutions">&amp; Solutions</span></h2>
+          <span class="tp-spark-right">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFBF00" stroke-width="3" stroke-linecap="round">
+              <line x1="19" y1="12" x2="23" y2="12"/>
+              <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+              <line x1="12" y1="5" x2="12" y2="1"/>
+            </svg>
+          </span>
+        </div>
 
-        <h2 class="section-title">Technology Products & Solutions</h2>
-
-        <p class="section-subtitle">We sell Branded, New, and Refurbished technology products</p>
-
+        <p class="tp3d-subtitle">We sell Branded, New, and Refurbished technology products</p>
+        <div class="tp3d-dual-bar">
+          <span class="tp-bar-blue"></span>
+          <span class="tp-bar-yellow"></span>
+        </div>
       </div>
 
-      <div class="product-grid reveal">
-
-        <div class="product-item">
-
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-
-          <h4>Computers</h4>
-
+      <!-- 8 Raised 3D Product Cards Grid -->
+      <div class="tp3d-grid">
+        <!-- 1. Computers -->
+        <div class="tp3d-card tp3d-c-blue">
+          <div class="tp3d-icon-circle tp3d-badge-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">Computers</h3>
         </div>
 
-        <div class="product-item">
-
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="14" rx="2"/><line x1="2" y1="21" x2="22" y2="21"/></svg>
-
-          <h4>Laptops</h4>
-
+        <!-- 2. Laptops -->
+        <div class="tp3d-card tp3d-c-yellow">
+          <div class="tp3d-icon-circle tp3d-badge-yellow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="12" rx="2"/>
+              <line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">Laptops</h3>
         </div>
 
-        <div class="product-item">
-
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-
-          <h4>Desktops</h4>
-
+        <!-- 3. Desktops -->
+        <div class="tp3d-card tp3d-c-purple">
+          <div class="tp3d-icon-circle tp3d-badge-purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="6" height="18" rx="1"/>
+              <rect x="10" y="4" width="12" height="11" rx="1"/>
+              <line x1="13" y1="19" x2="19" y2="19"/>
+              <line x1="16" y1="15" x2="16" y2="19"/>
+              <circle cx="5" cy="7" r="0.8" fill="currentColor"/>
+              <circle cx="5" cy="10" r="0.8" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">Desktops</h3>
         </div>
 
-        <div class="product-item">
-
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-
-          <h4>Servers</h4>
-
+        <!-- 4. Servers -->
+        <div class="tp3d-card tp3d-c-green">
+          <div class="tp3d-icon-circle tp3d-badge-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2"/>
+              <rect x="2" y="14" width="20" height="8" rx="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/>
+              <line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">Servers</h3>
         </div>
 
-        <div class="product-item">
-
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
-
-          <h4>CCTV Systems</h4>
-
+        <!-- 5. CCTV Systems -->
+        <div class="tp3d-card tp3d-c-pink">
+          <div class="tp3d-icon-circle tp3d-badge-pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">CCTV Systems</h3>
         </div>
 
-        <div class="product-item">
-
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-
-          <h4>Workstations</h4>
-
+        <!-- 6. Workstations -->
+        <div class="tp3d-card tp3d-c-cyan">
+          <div class="tp3d-icon-circle tp3d-badge-cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="13" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="16" x2="12" y2="21"/>
+              <line x1="12" y1="6" x2="12" y2="10"/>
+              <polyline points="10 8 12 6 14 8"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">Workstations</h3>
         </div>
 
-        <div class="product-item">
-
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="6.01" y2="12"/><line x1="10" y1="12" x2="10.01" y2="12"/><line x1="14" y1="12" x2="14.01" y2="12"/><line x1="18" y1="12" x2="18.01" y2="12"/></svg>
-
-          <h4>Switches</h4>
-
+        <!-- 7. Switches -->
+        <div class="tp3d-card tp3d-c-orange">
+          <div class="tp3d-icon-circle tp3d-badge-orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="3"/>
+              <circle cx="6" cy="12" r="1.2" fill="currentColor"/>
+              <circle cx="10" cy="12" r="1.2" fill="currentColor"/>
+              <circle cx="14" cy="12" r="1.2" fill="currentColor"/>
+              <circle cx="18" cy="12" r="1.2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">Switches</h3>
         </div>
 
-         <div class="product-item">
-
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-
-          <h4>Networking Equip</h4>
-
+        <!-- 8. Networking Equip -->
+        <div class="tp3d-card tp3d-c-indigo">
+          <div class="tp3d-icon-circle tp3d-badge-indigo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="2" width="6" height="6" rx="1"/>
+              <rect x="2" y="16" width="6" height="6" rx="1"/>
+              <rect x="16" y="16" width="6" height="6" rx="1"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <line x1="5" y1="12" x2="5" y2="16"/>
+              <line x1="19" y1="12" x2="19" y2="16"/>
+            </svg>
+          </div>
+          <h3 class="tp3d-card-title">Networking Equip</h3>
         </div>
-
       </div>
 
-      <p style="text-align: center; color: #6B7280; font-weight: 600;">Serving resellers and businesses across India</p>
+      <!-- Resellers Pill Badge -->
+      <div class="tp3d-resellers-badge-wrap">
+        <div class="tp3d-resellers-badge">
+          <span class="tp3d-resellers-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </span>
+          <span class="tp3d-resellers-divider"></span>
+          <span class="tp3d-resellers-text">Serving resellers and businesses across India</span>
+        </div>
+      </div>
 
-      <div style="margin-top: 3rem; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(15,111,255,0.15);" class="reveal">
-
-          <img loading="lazy" decoding="async" src="assets/images/posters/company-poster.jpg" alt="AARA Computers Products" style="width: 100%; display: block;" />
-
+      <!-- Promotional Poster Frame Below -->
+      <div class="tp3d-poster-wrap">
+        <img loading="lazy" decoding="async" src="assets/images/posters/company-poster.jpg" alt="AARA Computers Technology Products vadapalani poster" />
       </div>
 
     </div>
-
   </section>
 
 
@@ -643,6 +2091,56 @@
 
   </section>
 
+  <section class="services-intro">
+
+    <div class="container">
+
+      <div class="services-intro-grid">
+
+        <div>
+
+          <h2 class="section-title">Reliable Technology Solutions Since 2012</h2>
+
+          <p class="services-intro-desc">AARA Computers provides comprehensive IT services designed to support businesses and individuals. From setting up secure networks to digital marketing strategies, we deliver solutions that are efficient, scalable, and affordable.</p>
+
+          <div class="credential-bar" style="margin-top: 2rem; padding: 1rem; border-radius: 12px;">
+
+             <div class="cred-badges-row">
+
+                 <span class="cert-badge">
+
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+
+                  Led by Microsoft Certified Professional (MCP)
+
+                 </span>
+
+                 <span class="cert-badge">
+
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+
+                  Microsoft Certified Systems Engineer (MCSE)
+
+                 </span>
+
+             </div>
+
+          </div>
+
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+
+          <img loading="lazy" decoding="async" src="assets/images/logo/company-logo-stacked.png" alt="AARA Computers Logo" style="max-width: 360px; width: 100%; height: auto; object-fit: contain;" />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
 
   <!-- CTA -->
@@ -687,137 +2185,109 @@
 
   ══════════════════════════════════════ -->
 
-  <footer>
+  <footer class="ftr3d-footer" role="contentinfo">
+    <div class="ftr3d-container">
+      <div class="ftr3d-grid">
 
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-
-          <img loading="lazy" decoding="async" src="assets/images/logo/company-logo.png" alt="AARA Computers" />
-
-          <p>Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.</p>
-
-          <div class="footer-social">
-
-            <a href="https://www.instagram.com/aaracomputers" target="_blank" title="Instagram">
-
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-
+        <!-- COLUMN 1: Company Info -->
+        <div class="ftr3d-col ftr3d-col-brand">
+          <a href="index.html" class="ftr3d-logo-link" aria-label="AARA Computers Home">
+            <img loading="lazy" decoding="async" src="assets/images/logo/company-logo.png" alt="AARA Computers Logo" class="ftr3d-logo"/>
+          </a>
+          <p class="ftr3d-brand-desc">
+            Premier computer training academy and IT services company in Vadapalani, Chennai. Building careers and powering businesses since 2012.
+          </p>
+          <div class="ftr3d-social-row">
+            <a href="https://www.instagram.com/aaracomputers" target="_blank" rel="noopener noreferrer" class="ftr3d-social-btn" title="Follow us on Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
             </a>
-
-            <a href="https://wa.me/919952065544" target="_blank" title="WhatsApp">
-
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+            <a href="https://wa.me/919952065544" target="_blank" rel="noopener noreferrer" class="ftr3d-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
             </a>
-
-            <a href="tel:+919952065544" title="Call Us">
-
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-
+            <a href="tel:+919952065544" class="ftr3d-social-btn" title="Call Us" aria-label="Call">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
             </a>
-
           </div>
-
         </div>
 
-        <div class="footer-col">
-
-          <h4>Quick Links</h4>
-
-          <ul>
-
-            <li><a href="index.html">Home</a></li>
-
-            <li><a href="about.html">About Us</a></li>
-
-            <li><a href="courses.html">Our Courses</a></li>
-
-            <li><a href="services.html">IT Services</a></li>
-
-            <li><a href="gallery.html">Gallery</a></li>
-<li><a href="media.html">Media</a></li>
-
-            <li><a href="contact.html">Contact Us</a></li>
-
+        <!-- COLUMN 2: Quick Links -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">QUICK LINKS</h4>
+          <ul class="ftr3d-link-list">
+            <li><a href="index.html"><span class="ftr3d-arrow">▸</span> Home</a></li>
+            <li><a href="about.html"><span class="ftr3d-arrow">▸</span> About Us</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Our Courses</a></li>
+            <li><a href="services.html?v=2"><span class="ftr3d-arrow">▸</span> IT Services</a></li>
+            <li><a href="gallery.html"><span class="ftr3d-arrow">▸</span> Gallery</a></li>
+            <li><a href="media.html"><span class="ftr3d-arrow">▸</span> Media</a></li>
+            <li><a href="contact.html"><span class="ftr3d-arrow">▸</span> Contact Us</a></li>
           </ul>
-
         </div>
 
-        <div class="footer-col">
-
-          <h4>Popular Courses</h4>
-
-          <ul>
-
-            <li><a href="courses.html">Office Automation (CCA)</a></li>
-
-            <li><a href="courses.html">Tally Prime with GST</a></li>
-
-            <li><a href="courses.html">Digital Marketing</a></li>
-
-            <li><a href="courses.html">Web Development</a></li>
-
-            <li><a href="courses.html">Python Programming</a></li>
-
-            <li><a href="courses.html">CCTV Installation</a></li>
-
+        <!-- COLUMN 3: Popular Courses -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">POPULAR COURSES</h4>
+          <ul class="ftr3d-link-list">
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Office Automation (CCA)</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Tally Prime with GST</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Digital Marketing</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Web Development</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> Python Programming</a></li>
+            <li><a href="courses.html?v=3"><span class="ftr3d-arrow">▸</span> CCTV Installation</a></li>
           </ul>
-
         </div>
 
-        <div class="footer-col">
+        <!-- COLUMN 4: Contact Info -->
+        <div class="ftr3d-col">
+          <h4 class="ftr3d-col-title">CONTACT INFO</h4>
+          <div class="ftr3d-contact-list">
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
+            </div>
 
-          <h4>Contact Info</h4>
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              <span>
+                <a href="tel:+919952065544">99520 65544</a> / <a href="tel:+919445435755">94454 35755</a>
+              </span>
+            </div>
 
-          <div class="footer-contact-item">
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:aaracomputers@gmail.com">aaracomputers@gmail.com</a>
+            </div>
 
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-
-            <span>No.34/108, Gangai Amman Koil Street, Vadapalani, Chennai – 600026</span>
-
+            <div class="ftr3d-contact-item">
+              <svg class="ftr3d-c-icon" viewBox="0 0 24 24" fill="none" stroke="#FFC928" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Mon–Sat: 9:00 AM – 9:00 PM<br><span style="color:#F59E0B;">Sunday: Closed</span></span>
+            </div>
           </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.35a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-
-            <span><a href="tel:+919952065544" style="color:inherit;">99520 65544</a> / <a href="tel:+919445435755" style="color:inherit;">94454 35755</a></span>
-
-          </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-
-            <a href="mailto:aaracomputers@gmail.com" style="color:inherit;">aaracomputers@gmail.com</a>
-
-          </div>
-
-          <div class="footer-contact-item">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-
-            <span>Mon–Sat: 9:00 AM – 9:00 PM<br/>Sunday: Closed</span>
-
-          </div>
-
         </div>
 
       </div>
 
-      <div class="footer-bottom">
-
-        <span>© 2024 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
-
-        
-
+      <div class="ftr3d-bottom">
+        <span class="ftr3d-copy">© 2026 AARA Computers. All rights reserved. | Vadapalani, Chennai</span>
       </div>
-
     </div>
-
   </footer>
 
 
@@ -826,7 +2296,7 @@
 
   <div class="fab-container">
 
-    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank">
+    <a href="https://wa.me/919952065544" class="fab-btn whatsapp" target="_blank" rel="noopener noreferrer">
 
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 
@@ -847,6 +2317,7 @@
 
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/premium.js" defer></script>
 
 </body>
 
